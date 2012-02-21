@@ -1,0 +1,17 @@
+<% @page_title = "Edit Team: #{@team.name}" %>
+
+<%= link_to("<< Back to Teams", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="team edit">
+  <h2>Update Team</h2>
+
+  <%= form_for(:team, :url => {:action => 'update', :id => @team.id}) do |f| %>
+  
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Update Team") %>
+    </div>
+    
+  <% end %>
+</div>

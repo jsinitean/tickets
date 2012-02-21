@@ -1,0 +1,39 @@
+<% @page_title = "Show Ticket: #{@ticket.name}" %>
+
+<%= link_to("<< Back to Ticket", {:action => 'list', :team_id => @team.id}, :class => 'back-link') %>
+
+<div class="ticket show">
+  <h2>Show Ticket</h2>
+
+  <table summary="Team detail view">
+    <tr>
+      <th>Team ID</th>
+      <td><%= @ticket.team_id %></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><%= @ticket.name %></td>
+    </tr>
+    <tr>
+      <th>Game Time</th>
+      <td><%= @ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @ticket.position %></td>
+    </tr>
+    <tr>
+      <th>Visible?</th>
+      <td><%= @ticket.visible ? 'true' : 'false' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @ticket.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @ticket.updated_at %></td>
+    </tr>
+  </table>
+  
+</div>

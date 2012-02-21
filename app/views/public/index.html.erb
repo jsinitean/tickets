@@ -1,0 +1,36 @@
+<body>
+<div id="selectorTop">
+<form name="chooseDateForm" id="chooseDateForm" action="#">
+				<fieldset>
+					<legend>Choose a date range for tickets:</legend>
+                    <ol>
+                        <li>
+                           	  <tr>
+							    <th><%= label(:game_at, "Start Date: ") %></th>
+							    <td><%= datetime_select(:game_at, :order => [:month, :day, :year]) %></td>
+							  </tr>
+						</li>
+                        <li>
+							  <tr>
+							    <th><%= label(:game_at, "End Date: ") %></th>
+							    <td><%= datetime_select(:game_at, :order => [:month, :day, :year]) %></td>
+							  </tr>
+						</li>
+                        <li>
+						    <label for="team">Choose a Team:</label>
+						    <select name="team-select" id="team-select" style="width: 100px">
+                                <option value="-1">All Teams</option>
+                                <option value="1">Chicago Bulls</option>
+                                <option value="2">Chicago Cubs</option>
+								<option value="3">Chicago White Sox</option>
+							</select>	
+                        </li>
+					</ol>
+					<input type="submit" value="Submit" />
+				</fieldset>
+		</form>
+</div>
+<div id="bodyPanel">
+	<p class="capstext">Purchase tickets for Cubs, White Sox, and Bulls games. We have no surcharges and will ship, or email, the tickets to you as soon as possible.</p>
+</div>
+</body>

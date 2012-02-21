@@ -1,0 +1,2 @@
+module PublicSectionHelper
+end

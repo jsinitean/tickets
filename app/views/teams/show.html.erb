@@ -1,0 +1,31 @@
+<% @page_title = "Show Team: #{@team.name}" %>
+
+<%= link_to("<< Back to Teams", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="team show">
+  <h2>Show Team</h2>
+
+  <table summary="Team detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @team.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @team.position %></td>
+    </tr>
+    <tr>
+      <th>Visible?</th>
+      <td><%= @team.visible ? 'true' : 'false' %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @team.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @team.updated_at %></td>
+    </tr>
+  </table>
+  
+</div>

@@ -1,0 +1,28 @@
+<%= error_messages_for(@section) %>
+
+<table summary="Section form fields">
+  <tr>
+    <th><%= f.label(:ticket_id, "Ticket") %></th>
+    <td><%= f.select(:ticket_id, @tickets.collect {|p| [p.name, p.id]}) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:name, "Section") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:row, "Row") %></th>
+    <td><%= f.text_field(:row) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:seat, "Seats") %></th>
+    <td><%= f.text_field(:seat) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:position) %></th>
+    <td><%= f.select(:position, 1..@section_count) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:visible) %></th>
+    <td><%= f.check_box(:visible) %></td>
+  </tr>
+</table>

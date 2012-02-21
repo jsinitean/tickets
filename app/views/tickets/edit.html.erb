@@ -1,0 +1,17 @@
+<% @page_title = "Edit Ticket: #{@ticket.name}" %>
+
+<%= link_to("<< Back to Ticket", {:action => 'list', :team_id => @team.id}, :class => 'back-link') %>
+
+<div class="ticket edit">
+  <h2>Update Ticket</h2>
+
+  <%= form_for(:ticket, :url => {:action => 'update', :id => @ticket.id, :team_id => @team.id}) do |f| %>
+  
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Update Ticket") %>
+    </div>
+    
+  <% end %>
+</div>

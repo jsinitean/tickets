@@ -1,0 +1,25 @@
+<%= error_messages_for(@tickets) %>
+
+<table summary="Ticket form fields">
+  <tr>
+    <th><%= f.label(:team_id, "Team") %></th>
+	<td><%= f.select(:team_id, @teams.collect {|p| [p.name, p.id]}) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:name, "Game") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:game_at, "Game Time") %></th>
+    <td><%= f.datetime_select(:game_at, :order => [:month, :day, :year],
+:ampm => true, :prompt => {:day => 'Day', :month => 'Month', :year => 'Year'}) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:position) %></th>
+    <td><%= f.select(:position, 1..@ticket_count) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:visible) %></th>
+    <td><%= f.check_box(:visible) %></td>
+  </tr>
+</table>

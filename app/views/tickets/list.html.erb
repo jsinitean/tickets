@@ -1,0 +1,32 @@
+<% @page_title = "Tickets List" %>
+
+<%= link_to("<< Back to Teams List", {:controller => "teams", :action => 'list'}, :class => 'back-link') %>
+
+<div class="ticket list">
+  <h2>Tickets</h2>
+  
+  <%= link_to("Add New Ticket", {:action => 'new', :team_id => @team.id}, :class => 'action new') %>
+
+  <table class="listing" summary="ticket list">
+    <tr class="header">
+      <th>ID</th>
+      <th>Game</th>
+	  <th>Game Time</th>
+      <th>Visible</th>
+      <th>Actions</th>
+    </tr>
+    <% @tickets.each do |ticket| %>
+    <tr>
+      <td><%= ticket.position %></td>
+      <td><%= ticket.name %></td>
+	  <td><%= ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td>
+      <td class="center"><%= status_tag(ticket.visible) %></td>
+      <td class="actions">
+        <%= link_to("View Sections", {:controller => 'sections', :action => 'list', :ticket_id => ticket.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => ticket.id, :team_id => @team.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => ticket.id, :team_id => @team.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

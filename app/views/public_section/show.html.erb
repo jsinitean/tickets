@@ -1,0 +1,19 @@
+<center>
+<h2><%= @ticket.name %></h2>
+
+	<table class="listing" summary="Ticket list">
+	    <tr class="header">
+	      <th>Section</th>
+		  <th>Row</th>
+		  <th>Seats</th>
+	    </tr>
+	    <% @sections.each do |section| %>
+	    <tr class="<%= cycle('odd', 'even') %>"><center>
+	      <td><%= section.name %></td>
+	      <td><%= section.row %></td>
+	      <td><%= section.seat %></td></center>
+	    </tr>
+	    <% end %>
+	  </table>
+	
+</center>

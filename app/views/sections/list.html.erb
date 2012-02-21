@@ -1,0 +1,34 @@
+<% @page_title = "Sections List" %>
+
+<%= link_to("<< Back to Tickets List", {:controller => "tickets", :action => 'list', :team_id => @ticket.team_id}, :class => 'back-link') %>
+
+<div class="section list">
+  <h2>Sections</h2>
+  
+  <%= link_to("Add New Section", {:action => 'new', :ticket_id => @ticket.id}, :class => 'action new') %>
+
+  <table class="listing" summary="Section list">
+    <tr class="header">
+      <th>ID</th>
+      <th>Section</th>
+	  <th>Row</th>
+	  <th>Seats</th>
+      <th>Available</th>
+      <th>Actions</th>
+    </tr>
+    <% @sections.each do |section| %>
+    <tr>
+      <td><%= section.position %></td>
+      <td><%= section.name %></td>
+	  <td><%= section.row %></td>
+ 	  <td><%= section.seat %></td>
+      <td class="center"><%= status_tag(section.visible) %></td>
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => section.id, :ticket_id => @ticket.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => section.id, :ticket_id => @ticket.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => section.id, :ticket_id => @ticket.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>
