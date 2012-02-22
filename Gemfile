@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.0'
 
 # Bundle edge Rails instead:
-gem 'rails', '1.9.2'
 
 gem 'mysql2'
 
