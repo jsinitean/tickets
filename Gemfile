@@ -7,6 +7,7 @@ gem 'rails', '3.2.1'
 gem 'mysql2', '0.3.11'
 
 gem 'rake', '0.9.2'
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
