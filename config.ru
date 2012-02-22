@@ -2,5 +2,3 @@
 
 #require ::File.expand_path('../config/environment',  __FILE__)
 run SimpleCms::Application
-
-bundle exec ruby web.rb -p $PORT
