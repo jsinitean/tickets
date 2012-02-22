@@ -1,7 +1,7 @@
-require 'lib/position_mover'
+#require 'lib/position_mover'
 class Ticket < ActiveRecord::Base
   
-  include PositionMover
+  #include PositionMover
   
   belongs_to :team
   has_many :sections
