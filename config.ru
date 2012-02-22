@@ -1,6 +1,5 @@
 # This file is used by Rack-based servers to start the application.
 
-require ::File.expand_path('../config/environment',  __FILE__)
-run tickets::Application
+#require ::File.expand_path('../config/environment',  __FILE__)
+run SimpleCms::Application
 
-bundle exec ruby web.rb -p $PORT
