@@ -12,7 +12,7 @@ class Section < ActiveRecord::Base
   
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
-  scope :sorted, order('sections.position ASC')
+  scope :sorted, order('sections.name ASC, sections.seat ASC')
   
   private
   
