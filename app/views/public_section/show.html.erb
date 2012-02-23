@@ -1,19 +1,15 @@
 <center>
-<h2><%= @ticket.name %></h2>
+<h2>vs. <%= @ticket.name %></h2>
+<h4><td><%= @ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td></h4>
 
 	<table class="listing" summary="Ticket list">
-	    <tr class="header">
-	      <th>Section</th>
-		  <th>Row</th>
-		  <th>Seats</th>
-		  <th>Price</th>
-	    </tr>
+
 	    <% @sections.each do |section| %>
 	    <tr class="<%= cycle('odd', 'even') %>"><center>
-	      <td><%= section.name %></td>
-	      <td><%= section.row %></td>
-	      <td><%= section.seat %></td>
-		  <td>$<%= section.price %></td>
+	      <td>Section <%= section.name %></td>
+	      <td>Row <%= section.row %></td>
+	      <td>Seat <%= section.seat %></td>
+		  <td>- $<%= section.price %></td>
 		</center>
 	    </tr>
 	    <% end %>

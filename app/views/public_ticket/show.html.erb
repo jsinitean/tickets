@@ -1,12 +1,14 @@
 <center>
-<h2><%= @team.name %></h2>
-
+	<div id="headtwo"><%= @team.name %>
+	</div>
 	<table class="listing" summary="Ticket list">
-	    <tr class="header">
+	    <div id="sectionHeader">
+		<tr class="sectionHeader">
 	      <th>Game</th>
 		  <th>Game Time</th>
 	      <th>Sections</th>
 	    </tr>
+	</div>
 	    <% @tickets.each do |ticket| %>
 	    <tr class="<%= cycle('odd', 'even') %>">
 	      <td><%= ticket.name %></td>
