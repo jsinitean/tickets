@@ -6,12 +6,15 @@
 	      <th>Section</th>
 		  <th>Row</th>
 		  <th>Seats</th>
+		  <th>Price</th>
 	    </tr>
 	    <% @sections.each do |section| %>
 	    <tr class="<%= cycle('odd', 'even') %>"><center>
 	      <td><%= section.name %></td>
 	      <td><%= section.row %></td>
-	      <td><%= section.seat %></td></center>
+	      <td><%= section.seat %></td>
+		  <td>$<%= section.price %></td>
+		</center>
 	    </tr>
 	    <% end %>
 	  </table>

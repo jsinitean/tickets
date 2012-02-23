@@ -12,7 +12,8 @@
       <th>ID</th>
       <th>Section</th>
 	  <th>Row</th>
-	  <th>Seats</th>
+	  <th>Seat</th>
+	  <th>Price</th>
       <th>Available</th>
       <th>Actions</th>
     </tr>
@@ -22,6 +23,7 @@
       <td><%= section.name %></td>
 	  <td><%= section.row %></td>
  	  <td><%= section.seat %></td>
+	  <td>$<%= section.price%></td>
       <td class="center"><%= status_tag(section.visible) %></td>
       <td class="actions">
         <%= link_to("Show", {:action => 'show', :id => section.id, :ticket_id => @ticket.id}, :class => 'action show') %>

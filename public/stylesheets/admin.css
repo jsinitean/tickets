@@ -38,7 +38,7 @@ a.action:hover { background: #B6D491; }
 .show table tr td { border: 1px solid #666666; }
 .edit table, .new table { margin: 0 auto; }
 
-.odd { background: #E5CE69; }
+.odd { background: #DCDCDC; }
 .even { background: none; }
 
 .section + .section { padding-top: 0.5em; margin-top: 0.5em; 
