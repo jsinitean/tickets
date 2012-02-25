@@ -30,7 +30,6 @@ class TicketsController < ApplicationController
     @ticket = Ticket.new(params[:ticket])
     # Save the object
     if @ticket.save
-      @ticket.move_to_position(new_position)
       # If save succeeds, redirect to the list action
       flash[:notice] = "Ticket created."
       redirect_to(:action => 'list', :team_id => @ticket.team_id)
@@ -54,7 +53,6 @@ class TicketsController < ApplicationController
     @ticket = Ticket.find(params[:id])
     # Update the object
     if @ticket.update_attributes(params[:ticket])
-      @ticket.move_to_position(new_position)
       # If update succeeds, redirect to the list action
       flash[:notice] = "Ticket updated."
       redirect_to(:action => 'show', :id => @ticket.id, :team_id => @ticket.team_id)
@@ -72,7 +70,6 @@ class TicketsController < ApplicationController
   
   def destroy
     ticket = Ticket.find(params[:id])
-    ticket.move_to_position(nil)
     ticket.destroy
     flash[:notice] = "Ticket destroyed."
     redirect_to(:action => 'list', :team_id => @team.id)

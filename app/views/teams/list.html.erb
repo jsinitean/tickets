@@ -11,14 +11,12 @@
   
   <table class="listing" summary="Team list">
     <tr class="header">
-      <th>ID</th>
       <th>Team</th>
       <th>Visible</th>
       <th>Actions</th>
     </tr>
     <% @teams.each do |team| %>
     <tr class="<%= cycle('odd', 'even') %>">
-      <td><%= team.position %></td>
       <td><%= team.name %></td>
       <td class="center"><%= status_tag(team.visible) %></td>
 

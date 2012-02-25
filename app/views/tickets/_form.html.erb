@@ -15,10 +15,6 @@
 :ampm => true, :prompt => {:day => 'Day', :month => 'Month', :year => 'Year'}) %></td>
   </tr>
   <tr>
-    <th><%= f.label(:position) %></th>
-    <td><%= f.select(:position, 1..@ticket_count) %></td>
-  </tr>
-  <tr>
     <th><%= f.label(:visible) %></th>
     <td><%= f.check_box(:visible) %></td>
   </tr>

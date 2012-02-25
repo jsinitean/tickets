@@ -9,7 +9,6 @@
 
   <table class="listing" summary="ticket list">
     <tr class="header">
-      <th>ID</th>
       <th>Game</th>
 	  <th>Game Time</th>
       <th>Visible</th>
@@ -17,7 +16,6 @@
     </tr>
     <% @tickets.each do |ticket| %>
     <tr>
-      <td><%= ticket.position %></td>
       <td><%= ticket.name %></td>
 	  <td><%= ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td>
       <td class="center"><%= status_tag(ticket.visible) %></td>

@@ -12,6 +12,14 @@ ul{list-style-type:none;}
 /* HEADERS FOR INTERNAL PAGE*/ 
 #headtwo {height:30px; text-align: center; font-size:30px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 #sectionHeader {text-align: center; font-size:18px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
+#working ul li a{width:74px; height:36px; text-decoration:none; background:url(localhost:3000/images/more.gif) no-repeat 0 0 #AEAEAE; color:#fff;}
+
+/* large action buttons */
+
+a.view { float: left; padding: 2px 5px; margin: 0 0 0 0; 
+  background:url(/images/more.gif) no-repeat 0 0 #AEAEAE;  color: #4C2516; width:62px;
+  text-decoration: none; font-size: 0.9em; text-align: left; }
+a.view:hover { background:url(/images/more1.gif) no-repeat 0 0 #AEAEAE; }
 
 /* MENU PANEL*/
 #topPanel ul{display:block; width:732px; height:36px; position:absolute; top:0; right:0; margin:11px 0 0; padding:0 29px 0 0; border-bottom:1px solid #AEAEAE;}
