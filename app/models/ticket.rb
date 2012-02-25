@@ -19,4 +19,9 @@ class Ticket < ActiveRecord::Base
     "tickets.team_id = #{team_id.to_i}"
   end
   
+  def self.search(search)
+    search_condition = "%" + search + "%"
+    find(:all, :conditions => ['team_id = ?', 'game_at >= ?', 'game_at <= ?'])
+  end
+  
 end

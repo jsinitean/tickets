@@ -3,8 +3,8 @@
 <form name="chooseDateForm" id="chooseDateForm" action="#">
 				<fieldset>
 					<legend>Choose a date range for available tickets:</legend>
-                    <ol>
-                        <li>
+                       <ul> 
+						<li>
                            	  <tr>
 							    <th><%= label(:game_at, "Start Date: ") %></th>
 							    <td><%= date_select(:game_at, :order => [:month, :day, :year]) %></td>
@@ -25,7 +25,7 @@
 								<option value="3">Chicago White Sox</option>
 							</select>	
                         </li>
-					</ol>
+					  </ul>	
 					<input type="submit" value="Submit" />
 				</fieldset>
 		</form>

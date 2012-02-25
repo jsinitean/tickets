@@ -7,7 +7,7 @@
 
 .login form { margin: 100px 250px; }
 .menu .identity { text-align: center; }
-.menu ul { margin: 3em 250px; list-style: none; }
+.menu ul { text-align:center; list-style: none; padding-left:0px;  }
 .menu ul li { margin-bottom: 1em; }
 
 a { text-decoration: none; }
@@ -30,7 +30,7 @@ a.action:hover { background: #B6D491; }
 .back-link { font-size: 0.8em; margin-bottom: 1em; }
 .form-buttons { text-align: center; margin: 1em 0; }
 
-.list table { clear: both; width: 100%; }
+.list table { clear: both; width: 80%; margin-left:auto; margin-right:auto; }
 .list table tr td { border: 1px solid #666666; }
 .show table { clear: both; margin: 0 200px; width: 300px; }
 .show table.wide { width: 600px; margin: 0 50px; }
@@ -61,3 +61,4 @@ span.status.false { background: red; color: red; }
 #errorExplanation p { color: #333333; margin: 0; padding: 3px 0.5em; }
 #errorExplanation ul { margin-top: 0; }
 #errorExplanation ul li { list-style: square; }
+
