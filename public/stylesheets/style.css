@@ -38,6 +38,13 @@ a.viewsox { float: right; padding: 2px 0; margin: 0 0 0 0;
   text-decoration: none; font-size: 0.9em; text-align: left; }
 a.viewsox:hover { background:url(/images/sox.jpg) no-repeat 0 0; opacity: 0.9;}
 
+#purchaseView{width:150px; height:85px; position:relative; margin:0 auto; padding:15px;}
+
+a.purchase { float: right; padding: 2px 0; margin: 0 0 0 0; 
+  background:url(/images/buy.jpg) no-repeat 0 0;  color: #4C2516; width:150px; height:85px; opacity: 0.5; border-radius:25px;
+  text-decoration: none; font-size: 0.9em; text-align: left; }
+a.purchase:hover { background:url(/images/buy.jpg) no-repeat 0 0; opacity: 0.9;}
+
 /* MENU PANEL*/
 #topPanel ul{display:block; width:732px; height:36px; position:absolute; top:0; right:0; margin:11px 0 0; padding:0 29px 0 0; border-bottom:1px solid #AEAEAE;}
 #topPanel ul li{float:right; font:12px/36px "Trebuchet MS",Arial, Helvetica, sans-serif; font-weight:bold;}
