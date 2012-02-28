@@ -24,9 +24,9 @@ a.viewnext:hover { background:url(/images/more1.gif) no-repeat 0 0 #AEAEAE; opac
 #imageView{width:400px; height:280px; position:relative; margin:0 auto; padding:15px;}
 
 a.viewbull { float: right; padding: 2px 0; margin: 0 0 0 0; 
-  background:url(/images/bulls.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
+  background:url(/images/chibulls.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
   text-decoration: none; font-size: 0.9em; text-align: left; }
-a.viewbull:hover { background:url(/images/bulls.jpg) no-repeat 0 0; opacity: 0.9;}
+a.viewbull:hover { background:url(/images/chibulls.jpg) no-repeat 0 0; opacity: 0.9;}
 
 a.viewcub { float: right; padding: 2px 0; margin: 0 0 0 0; 
   background:url(/images/cubs.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
