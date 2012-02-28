@@ -14,7 +14,7 @@
 	      <td><%= ticket.name %></td>
 		  <td><%= ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td>
 	      <td>
-	        <%= link_to("View", {:controller => 'public_section', :action => 'show', :ticket_id => ticket.id}, :class => 'view') %>
+	        <%= link_to("View", {:controller => 'public_section', :action => 'show', :ticket_id => ticket.id}, :class => 'viewnext') %>
 	      </td>
 	    </tr>
 	    <% end %>

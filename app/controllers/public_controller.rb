@@ -5,9 +5,10 @@ class PublicController < ApplicationController
   before_filter :setup_navigation
   before_filter :find_ticket
   before_filter :find_team
+  before_filter :index
   
   def index
-    # intro text
+    @teams = Team.visible.sorted
   end
 
   private

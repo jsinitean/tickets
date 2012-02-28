@@ -15,6 +15,6 @@ class Team < ActiveRecord::Base
   
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
-  scope :sorted, order('teams.position ASC')
+  scope :sorted, order('teams.position DESC')
   scope :search, lambda {|query| where(["name LIKE ?", "%#{query}%"])}
 end
