@@ -6,6 +6,7 @@ gem 'rails', '3.2.1'
 
 gem 'mysql2', '0.3.11'
 
+require 'rake/dsl_definition'
 gem 'rake', '0.9.2'
 gem 'pg'
 

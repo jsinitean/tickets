@@ -5,6 +5,7 @@ class Ticket < ActiveRecord::Base
   
   belongs_to :team
   has_many :sections
+  belongs_to :opposing_teams
 
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
@@ -17,11 +18,6 @@ class Ticket < ActiveRecord::Base
   
   def position_scope
     "tickets.team_id = #{team_id.to_i}"
-  end
-  
-  def self.search(search)
-    search_condition = "%" + search + "%"
-    find(:all, :conditions => ['team_id = ?', 'game_at >= ?', 'game_at <= ?'])
   end
   
 end

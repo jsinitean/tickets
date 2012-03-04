@@ -1,4 +1,7 @@
 <center>
+<div id="back-button"><%= link_to("<< Back to Tickets", {:controller => "public_ticket", :action => 'show', :team_id => @ticket.team_id}, :class => 'back-link') %></div>
+
+<div id="sections">
 <h2>vs. <%= @ticket.name %></h2>
 <h4><td><%= @ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td></h4>
 
@@ -15,6 +18,7 @@
 	    <% end %>
 	  </table>
 	<div id="purchaseView">
-	      <%= link_to("", {:controller => 'public_ticket', :action => 'show', :team_id => 1}, :class => 'purchase') %>
+	      <%= link_to("", {:controller => "public_ticket", :action => 'show', :team_id => @ticket.team_id}, :class => 'purchase') %>
 	</div>
+</div>
 </center>

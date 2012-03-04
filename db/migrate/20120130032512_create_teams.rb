@@ -3,7 +3,8 @@ class CreateTeams < ActiveRecord::Migration
     create_table :teams do |t|
       t.integer "team_id"
       t.string "name"
-      t.integer "position"
+      t.integer "sport_id"
+      t.string "location"
       t.boolean "visible", :default => false
       t.timestamps
     end

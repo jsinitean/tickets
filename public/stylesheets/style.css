@@ -13,27 +13,33 @@ ul{list-style-type:none;}
 #headtwo {height:30px; text-align: center; font-size:30px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 #sectionHeader {text-align: center; font-size:18px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 
+/*#sections{width:762px; height:400px; position:relative; margin:0 auto; padding:0;}
+*/
+.back-button{width:762px; height:15px; position:relative;}
+.ticket-list img{width:75px; height:50px; opacity:0.8;}
+a.back-link { font-size: .8em; text-align:right;}
+
 /* large action buttons */
 
-a.viewnext { float: left; padding: 2px 5px; margin: 0 0 0 0; 
+a.viewnext { float: left; padding: 3px 7px; margin: 0 0 0 0; 
   background:url(/images/more.gif) no-repeat 0 0 #AEAEAE;  color: #4C2516; width:62px; opacity:0.6; 
   text-decoration: none; font-size: 0.9em; text-align: left; }
-a.viewnext:hover { background:url(/images/more1.gif) no-repeat 0 0 #AEAEAE; opacity:0.3; }
+a.viewnext:hover { background:url(/images/more1.gif) no-repeat 0 0 #AEAEAE; opacity:0.7; }
 
 /*Actions within ImageView on main index page*/
 #imageView{width:400px; height:280px; position:relative; margin:0 auto; padding:15px;}
 
-a.viewbull { float: right; padding: 2px 0; margin: 0 0 0 0; 
+a.viewbull { float: right; padding: 0px 0; margin: 0 0 4px 0; 
   background:url(/images/chibulls.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
   text-decoration: none; font-size: 0.9em; text-align: left; }
 a.viewbull:hover { background:url(/images/chibulls.jpg) no-repeat 0 0; opacity: 0.9;}
 
-a.viewcub { float: right; padding: 2px 0; margin: 0 0 0 0; 
-  background:url(/images/cubs.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
+a.viewcub { float: right; padding: 0 0; margin: 0 0 4px 0; 
+  background:url(/images/chicubs.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
   text-decoration: none; font-size: 0.9em; text-align: left; }
-a.viewcub:hover { background:url(/images/cubs.jpg) no-repeat 0 0; opacity: 0.9;}
+a.viewcub:hover { background:url(/images/chicubs.jpg) no-repeat 0 0; opacity: 0.9;}
 
-a.viewsox { float: right; padding: 2px 0; margin: 0 0 0 0; 
+a.viewsox { float: right; padding: 0 0; margin: 0 0 4px 0; 
   background:url(/images/sox.jpg) no-repeat 0 0;  color: #4C2516; width:380px; height:80px; opacity: 0.5; border-radius:25px;
   text-decoration: none; font-size: 0.9em; text-align: left; }
 a.viewsox:hover { background:url(/images/sox.jpg) no-repeat 0 0; opacity: 0.9;}

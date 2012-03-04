@@ -4,18 +4,16 @@
 	<table class="listing" summary="Ticket list">
 	    <div id="sectionHeader">
 		<tr class="sectionHeader">
-	      <th>Game</th>
-		  <th>Game Time</th>
-	      <th>Sections</th>
+		  <th></th>
+	      <th></th>
+		  <th></th>
 	    </tr>
 	</div>
 	    <% @tickets.each do |ticket| %>
-	    <tr class="<%= cycle('odd', 'even') %>">
-	      <td><%= ticket.name %></td>
+	    <tr class="ticket-list">
+		  <td><img src=/images/<%= ticket.opposing_teams.location %>></td>
 		  <td><%= ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td>
-	      <td>
-	        <%= link_to("View", {:controller => 'public_section', :action => 'show', :ticket_id => ticket.id}, :class => 'viewnext') %>
-	      </td>
+	      <td><%= link_to("View", {:controller => 'public_section', :action => 'show', :ticket_id => ticket.id}, :class => 'viewnext') %></td>
 	    </tr>
 	    <% end %>
 	  </table>
