@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228034427) do
+ActiveRecord::Schema.define(:version => 20120310183514) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",      :limit => 25
@@ -21,28 +21,26 @@ ActiveRecord::Schema.define(:version => 20120228034427) do
     t.datetime "updated_at",                                     :null => false
     t.string   "username",        :limit => 25
     t.string   "salt",            :limit => 40
+    t.string   "phone",           :limit => 25
   end
 
   add_index "admin_users", ["username"], :name => "index_admin_users_on_username"
 
   create_table "opposing_teams", :force => true do |t|
-    t.integer  "team_id"
     t.string   "name"
     t.string   "city"
     t.string   "location"
     t.integer  "sport_id"
-    t.boolean  "visible",    :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "visible",                   :default => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.string   "abbreviation", :limit => 3
   end
-
-  add_index "opposing_teams", ["team_id"], :name => "index_opposing_teams_on_team_id"
 
   create_table "sections", :force => true do |t|
     t.string   "name"
-    t.integer  "position"
     t.string   "row"
-    t.string   "section"
+    t.string   "seat"
     t.string   "price"
     t.boolean  "visible",    :default => false
     t.integer  "ticket_id"
@@ -53,7 +51,6 @@ ActiveRecord::Schema.define(:version => 20120228034427) do
   create_table "teams", :force => true do |t|
     t.integer  "team_id"
     t.string   "name"
-    t.integer  "position"
     t.integer  "sport_id"
     t.string   "location"
     t.boolean  "visible",    :default => false
@@ -65,7 +62,6 @@ ActiveRecord::Schema.define(:version => 20120228034427) do
 
   create_table "tickets", :force => true do |t|
     t.string   "name"
-    t.integer  "position"
     t.boolean  "visible",           :default => false
     t.datetime "game_at"
     t.integer  "team_id"
