@@ -13,6 +13,7 @@ class Ticket < ActiveRecord::Base
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
   scope :sorted, order('tickets.game_at ASC')
+  scope :dated, where('tickets.game_at > now()')
   
   private
   

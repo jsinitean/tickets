@@ -37,7 +37,7 @@ class PublicTicketController < ApplicationController
     end
 
     def show
-      @tickets = Ticket.visible.sorted.where(:team_id => @team.id)
+      @tickets = Ticket.visible.sorted.dated.where(:team_id => @team.id)
     end
     
 end
