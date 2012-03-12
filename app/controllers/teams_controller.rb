@@ -10,7 +10,7 @@ class TeamsController < ApplicationController
   end
   
   def list
-    @teams = Team.order("teams.position ASC")
+    @teams = Team.order("teams.name ASC")
   end
   
   def show

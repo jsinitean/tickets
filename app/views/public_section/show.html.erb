@@ -4,23 +4,25 @@
 <div id="sections">
 	<div class="headers">
 <h2>vs. <%= @ticket.name %></h2>
-<h4><td><%= @ticket.game_at.strftime("%a, %b %d, %Y %I:%M%p") %></td></h4>
+<h4><td><%= @ticket.game_at.strftime("%A, %B %d, %Y %I:%M%p") %></td></h4>
 	</div>
-
+<form action="mailto:jeremy.sinitean@gmail.com?Subject=<%= @ticket.opposing_teams.city %>%20<%= @ticket.opposing_teams.name %>:%20<%=  @ticket.game_at.strftime("%b %d, %Y %I:%M%p") %>&body=Which%20tickets%20would%20you%20like?" method="post">
 	<table class="listing" summary="Ticket list">
 
 	    <% @sections.each do |section| %>
 	    <tr class="<%= cycle('odd', 'even') %>"><center>
+		  <td><input type="checkbox" name="Section" value=<%= section.name %> class="section-check" /></td>
 	      <td>Section <%= section.name %></td>
 	      <td>Row <%= section.row %></td>
 	      <td>Seat <%= section.seat %></td>
-		  <td>- $<%= section.price %></td>
+		  <td>$<%= section.price %></td>
 		</center>
 	    </tr>
 	    <% end %>
 	  </table>
 	<div id="purchaseView">
-	      <a class='purchase' href="mailto:jeremy.sinitean@gmail.com?Subject=I'd%20like%20these%20tickets"></a>
+	<input type="submit" value="" class="purchase" >
 	</div>
+	</form>
 </div>
 </center>
