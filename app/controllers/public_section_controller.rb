@@ -4,7 +4,6 @@ class PublicSectionController < ApplicationController
 
       before_filter :setup_navigation
       before_filter :find_ticket
-      before_filter :find_section
       before_filter :show
 
       def index
@@ -20,12 +19,6 @@ class PublicSectionController < ApplicationController
       def find_ticket
         if params[:ticket_id]
           @ticket = Ticket.find_by_id(params[:ticket_id])
-        end
-      end
-      
-      def find_section
-        if params[:ticket_id]
-          @section = Section.find_by_ticket_id(params[:ticket_id])
         end
       end
 
