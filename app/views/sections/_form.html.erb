@@ -2,8 +2,8 @@
 
 <table summary="Section form fields">
   <tr>
-    <th><%= f.label(:ticket_id, "Ticket") %></th>
-    <td><%= f.select(:ticket_id, @tickets.collect {|p| [p.name, p.id]}) %></td>
+    <th><%= f.label(:tickets_id, "Ticket") %></th>
+    <td><%= f.select(:tickets_id, @tickets.collect {|p| [p.name, p.id]}) %></td>
   </tr>
   <tr>
     <th><%= f.label(:name, "Section") %></th>

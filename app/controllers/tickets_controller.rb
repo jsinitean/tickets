@@ -21,7 +21,7 @@ class TicketsController < ApplicationController
   def new
     @ticket = Ticket.new
     @ticket_count = Ticket.count + 1
-    @teams = Team.order('position ASC')
+    @teams = Team.order('name ASC')
   end
   
   def create
@@ -36,7 +36,7 @@ class TicketsController < ApplicationController
     else
       # If save fails, redisplay the form so user can fix problems
       @ticket_count = @team.tickets.size + 1
-      @teams = Team.order('position ASC')
+      @teams = Team.order('name ASC')
       render('new')
     end
   end
@@ -44,7 +44,7 @@ class TicketsController < ApplicationController
   def edit
     @ticket = Ticket.find(params[:id])
     @ticket_count = Ticket.count
-    @teams = Team.order('position ASC')
+    @teams = Team.order('name ASC')
   end
   
   def update
@@ -59,7 +59,7 @@ class TicketsController < ApplicationController
     else
       # If save fails, redisplay the form so user can fix problems
       @ticket_count = @team.tickets.size
-      @teams = Team.order('position ASC')
+      @teams = Team.order('name ASC')
       render('edit')
     end
   end

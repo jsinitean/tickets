@@ -25,12 +25,12 @@ class PublicSectionController < ApplicationController
       
       def find_section
         if params[:ticket_id]
-          @section = Section.find_by_ticket_id(params[:ticket_id])
+          @section = Section.find_by_tickets_id(params[:ticket_id])
         end
       end
 
       def show
-          @sections = Section.sorted.where(:ticket_id => @ticket.id)
+          @sections = Section.sorted.where(:tickets_id => @ticket.id)
       end
 
   end

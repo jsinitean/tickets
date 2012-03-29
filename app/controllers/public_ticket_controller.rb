@@ -6,7 +6,6 @@ class PublicTicketController < ApplicationController
     before_filter :find_ticket
     before_filter :find_team
     before_filter :show
-    before_filter :find_opposing_team
 
     def index
       # intro text
@@ -29,15 +28,12 @@ class PublicTicketController < ApplicationController
         @ticket = Ticket.find_by_team_id(params[:team_id])
       end
     end
-    
-    def find_opposing_team
-      if params[:opposing_team_id]
-        @opposing_team = OpposingTeams.find_by_id(:opposing_team_id)
-      end
-    end
 
     def show
-      @tickets = Ticket.visible.sorted.dated.where(:team_id => @team.id)
+      if params[:team_id]
+        @tickets = Ticket.visible.sorted.dated.where(:team_id => @team.id)
+        @sections = Section.sorted.join("sections.tickets_id = tickets.id")
+      end
     end
     
 end

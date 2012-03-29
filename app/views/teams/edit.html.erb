@@ -1,6 +1,8 @@
 <% @page_title = "Edit Team: #{@team.name}" %>
 
-<%= link_to("<< Back to Teams", {:action => 'list'}, :class => 'back-link') %>
+<div id="back-button">
+<%= link_to("Back", {:action => 'list'}, :class => 'back-link') %>
+</div>
 
 <div class="team edit">
   <h2>Update Team</h2>

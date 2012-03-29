@@ -1,6 +1,8 @@
 <% @page_title = "Delete Ticket: #{@ticket.name}" %>
 
-<%= link_to("<< Back to Ticket", {:action => 'list', :team_id => @team.id}, :class => 'back-link') %>
+<div id="back-button">
+<%= link_to("Back", {:action => 'list', :team_id => @team.id}, :class => 'back-link') %>
+</div>
 
 <div class="ticket delete">
   <h2>Delete Team</h2>
@@ -9,7 +11,7 @@
 
     <p>Are you sure you want to permanently delete this page?</p>
   
-    <p class="reference-name"><%= @ticket.name %></p>
+    <p class="reference-name"><%= @ticket.opposing_teams.city %> <%= @ticket.opposing_teams.name %></p>
   
     <div class="form-buttons">
       <%= submit_tag("Delete Ticket") %>

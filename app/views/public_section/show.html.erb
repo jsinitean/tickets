@@ -11,11 +11,11 @@
 
 	    <% @sections.each do |section| %>
 	    <tr class="<%= cycle('odd', 'even') %>"><center>
-		  <td><input type="checkbox" name="Section" value=<%= section.name %> class="section-check" /></td>
 	      <td>Section <%= section.name %></td>
 	      <td>Row <%= section.row %></td>
 	      <td>Seat <%= section.seat %></td>
 		  <td>$<%= section.price %></td>
+		
 		</center>
 	    </tr>
 	    <% end %>

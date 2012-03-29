@@ -1,6 +1,8 @@
 <% @page_title = "Delete Team: #{@team.name}" %>
 
-<%= link_to("<< Back to Teams", {:action => 'list'}, :class => 'back-link') %>
+<div id="back-button">
+<%= link_to("Back", {:action => 'list'}, :class => 'back-link') %>
+</div>
 
 <div class="team delete">
   <h2>Delete Team</h2>

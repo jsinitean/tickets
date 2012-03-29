@@ -1,15 +1,17 @@
 <% @page_title = "Delete Section: #{@section.name}" %>
 
-<%= link_to("<< Back to Section", {:action => 'list', :ticket_id => @ticket.id}, :class => 'back-link') %>
+<div class="back-button">
+<%= link_to("Back", {:action => 'list', :tickets_id => @section.tickets_id}, :class => 'back-link') %>
+</div>
 
 <div class="section delete">
   <h2>Delete Section</h2>
   
-  <%= form_for(:section, :url => {:action => 'destroy', :id => @section.id, :ticket_id => @ticket.id}) do |f| -%>
+  <%= form_for(:section, :url => {:action => 'destroy', :id => @section.id, :ticket_id => @section.tickets_id}) do |f| -%>
 
     <p>Are you sure you want to permanently delete this section?</p>
   
-    <p class="reference-name"><%= @section.name %></p>
+    <p class="reference-name">Section <%= @section.name %> Row <%= @section.row %> Seat <%= @section.seat %></p>
   
     <div class="form-buttons">
       <%= submit_tag("Delete Section") %>

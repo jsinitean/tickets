@@ -17,7 +17,7 @@ class Section < ActiveRecord::Base
   private
   
   def position_scope
-    "sections.ticket_id = #{ticket_id.to_i}"
+    "sections.tickets_id = #{ticket_id.to_i}"
   end
   
 end

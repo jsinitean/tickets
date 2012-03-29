@@ -3,10 +3,15 @@ class TeamsController < ApplicationController
   layout 'admin'
   
   before_filter :confirm_logged_in
+  before_filter :setup_navigation
   
   def index
     list
     render('list')
+  end
+  
+  def setup_navigation
+    @teams = Team.visible.sorted
   end
   
   def list

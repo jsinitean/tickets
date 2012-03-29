@@ -1,6 +1,8 @@
 <% @page_title = "Show Ticket: #{@ticket.name}" %>
 
-<%= link_to("<< Back to Ticket", {:action => 'list', :team_id => @team.id}, :class => 'back-link') %>
+<div id="back-button">
+<%= link_to("Back", {:action => 'list', :team_id => @team.id}, :class => 'back-link') %>
+</div>
 
 <div class="ticket show">
   <h2>Show Ticket</h2>
