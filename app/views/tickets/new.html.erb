@@ -5,7 +5,9 @@
 </div>
 
 <div class="ticket new">
+<div class="menu">
   <h2>Create Ticket</h2>
+</div>
 
   <%= form_for(:ticket, :url => {:action => 'create', :team_id => @team.id}) do |f| %>
   

@@ -1,13 +1,15 @@
 <% @page_title = "Create Section" %>
 
 <div id="back-button">
-<%= link_to("<< Back to List", {:action => 'list', :tickets_id => @ticket.id}, :class => 'back-link') %>
+<%= link_to("Back", {:action => 'list', :tickets_id => @ticket.id}, :class => 'back-link') %>
 </div>
 
 <div class="section new">
+<div class="menu">	
   <h2>Create Section</h2>
+</div>
 
-  <%= form_for(:section, :url => {:action => 'create', :ticket_id => @ticket.id}) do |f| %>
+  <%= form_for(:section, :url => {:action => 'create', :tickets_id => @ticket.id}) do |f| %>
   
     <%= render(:partial => 'form', :locals => {:f => f}) %>
     

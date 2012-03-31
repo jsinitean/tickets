@@ -13,7 +13,7 @@
   <div class="identity"><%= pluralize(@sections.size, 'section') %> found</div>
 
   <div id="addid">
-  <%= link_to("Add New Section", {:action => 'new', :ticket_id => @ticket.id}, :class => 'action new') %>
+  <%= link_to("Add New Section", {:action => 'new', :tickets_id => @ticket.id}, :class => 'action new') %>
   </div>
 
 </div>

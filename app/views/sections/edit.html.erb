@@ -5,7 +5,9 @@
 </div>
 
 <div class="section edit">
+<div class="menu">	
   <h2>Update Section</h2>
+</div>
 
   <%= form_for(:section, :url => {:action => 'update', :id => @section.id, :tickets_id => @section.tickets_id}) do |f| %>
   
