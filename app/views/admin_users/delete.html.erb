@@ -5,7 +5,9 @@
 </div>
 
 <div class="user delete">
+<div class="menu">	
   <h2>Delete Admin User</h2>
+</div>
   
   <%= form_for(:admin_user, :url => {:action => 'destroy', :id => @admin_user.id}) do |f| -%>
 

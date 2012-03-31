@@ -6,6 +6,7 @@ class PublicController < ApplicationController
   before_filter :find_ticket
   before_filter :find_team
   before_filter :index
+  before_filter :contact
   
   def index
     @teams = Team.visible.sorted
@@ -28,6 +29,10 @@ class PublicController < ApplicationController
     if params[:team_id]
       @ticket = Ticket.find_by_team_id(params[:team_id])
     end
+  end
+  
+  def contact
+    @admin_users = AdminUser.sorted
   end
   
 end

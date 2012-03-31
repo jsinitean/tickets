@@ -5,9 +5,11 @@
 </div>
 
 <div class="user list">
+<div class="menu">	
   <h2>Admin Users</h2>
+</div>
 
-  <div><%= pluralize(@admin_users.size, 'admin user') %> found</div>
+  <div class="identity"><%= pluralize(@admin_users.size, 'admin user') %> found</div>
  
   <div id="addid">
   <%= link_to('Add New Admin User', {:action => 'new'}, :class => 'action new') %>

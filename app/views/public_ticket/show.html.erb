@@ -1,5 +1,9 @@
 
 <center>
+<div id="back-button">
+<%= link_to("Back", {:controller => "public", :action => 'index'}, :class => 'back-link') %>
+</div>	
+	
 	<div id="headtwo"><%= @team.name %>
 	</div>
 	<table class="ticket-listing" summary="Ticket list">
