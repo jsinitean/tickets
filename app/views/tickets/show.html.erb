@@ -26,11 +26,19 @@
     </tr>
     <tr>
       <th>Created</th>
-      <td><%= @ticket.created_at %></td>
+      <td><%= @ticket.created_at.strftime("%b %d, %Y %I:%M%p") %></td>
     </tr>
     <tr>
       <th>Updated</th>
-      <td><%= @ticket.updated_at %></td>
+      <td><%= @ticket.updated_at.strftime("%b %d, %Y %I:%M%p") %></td>
+    </tr>
+    <tr>
+      <th>Promo</th>
+      <td><%= @ticket.promo %></td>
+    </tr>
+    <tr>
+      <th>Notes</th>
+      <td><%= @ticket.notes %></td>
     </tr>
   </table>
   
