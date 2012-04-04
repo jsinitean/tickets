@@ -25,7 +25,6 @@ class SectionsController < ApplicationController
   
   def new
     @section = Section.new(:tickets_id => @ticket.id)
-    @section_count = @ticket.sections.size + 1
     @tickets = Ticket.order('game_at ASC')
   end
   
