@@ -35,6 +35,14 @@
       <td><%= @section.visible ? 'true' : 'false' %></td>
     </tr>
     <tr>
+      <th>Face Value</th>
+      <td>$<%= @section.value %></td>
+    </tr>
+    <tr>
+      <th>Sold?</th>
+      <td><%= @section.sold ? 'true' : 'false' %></td>
+    </tr>
+    <tr>
       <th>Created</th>
       <td><%= @section.created_at %></td>
     </tr>

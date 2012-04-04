@@ -25,7 +25,9 @@
 	  <th>Row</th>
 	  <th>Seat</th>
 	  <th>Price</th>
-      <th>Available</th>
+      <th>Available?</th>
+	  <th>Face Value</th>
+	  <th>Sold?</th>
       <th>Actions</th>
     </tr>
     <% @sections.each do |section| %>
@@ -35,6 +37,8 @@
  	  <td><%= section.seat %></td>
 	  <td>$<%= section.price%></td>
       <td class="center"><%= status_tag(section.visible) %></td>
+      <td>$<%= section.value %></td>
+	  <td><span id="bring"><%= status_tag(section.sold) %></span></td>
       <td class="actions">
         <%= link_to("Show", {:action => 'show', :id => section.id}, :class => 'action show') %>
         <%= link_to("Edit", {:action => 'edit', :id => section.id}, :class => 'action edit') %>

@@ -60,6 +60,13 @@ span.status { display: block; width: 10px; height: 10px;
 span.status.true  { background: green; color: green; }
 span.status.false { background: red; color: red; }
 
+
+
+#bring span.status { display: block; width: 30px; height: 40px; 
+  margin: auto; padding: 0; border-radius: 15px; }
+#bring span.status.true  { background:url(/images/check.gif);  }
+#bring span.status.false { background: white; }
+
 /* Errors */
 .fieldWithErrors { }
 .fieldWithErrors label { color: #AA0000; }
