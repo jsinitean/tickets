@@ -33,10 +33,9 @@ class SectionsController < ApplicationController
     @section = Section.new(params[:section])
     if @section.save
       flash[:notice] = "Section created."
-      redirect_to(:action => 'list', :tickets_id => @section.ticket_id)
+      redirect_to(:action => 'list', :tickets_id => @section.tickets_id)
     else
-      @section_count = @ticket.sections.size + 1
-      @tickets = Ticket.opposing_teams.order('city ASC')
+      @tickets = Ticket.order('game_at ASC')
       render('new')
     end
   end
