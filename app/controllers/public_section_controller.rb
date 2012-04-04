@@ -23,7 +23,7 @@ class PublicSectionController < ApplicationController
       end
 
       def show
-          @sections = Section.sorted.where(:tickets_id => @ticket.id)
+          @sections = Section.visible.sorted.where(:tickets_id => @ticket.id)
       end
 
   end

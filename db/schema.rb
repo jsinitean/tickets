@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120331035426) do
+ActiveRecord::Schema.define(:version => 20120404031733) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",      :limit => 25
@@ -42,10 +42,12 @@ ActiveRecord::Schema.define(:version => 20120331035426) do
     t.string   "row"
     t.string   "seat"
     t.string   "price"
-    t.boolean  "visible",    :default => false
+    t.boolean  "visible",                  :default => false
     t.integer  "tickets_id"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.string   "value",      :limit => 25
+    t.boolean  "sold",                     :default => false
   end
 
   create_table "teams", :force => true do |t|

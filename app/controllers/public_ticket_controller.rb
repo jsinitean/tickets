@@ -32,7 +32,6 @@ class PublicTicketController < ApplicationController
     def show
       if params[:team_id]
         @tickets = Ticket.visible.sorted.dated.where(:team_id => @team.id)
-        @sections = Section.sorted.join("sections.tickets_id = tickets.id")
       end
     end
     
