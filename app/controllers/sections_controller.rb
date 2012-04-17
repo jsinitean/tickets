@@ -66,7 +66,7 @@ class SectionsController < ApplicationController
     section = Section.find(params[:id])
     section.destroy
     flash[:notice] = "Section destroyed."
-    redirect_to(:action => 'list', :ticket_id => @ticket.id)
+    redirect_to(:action => 'list', :tickets_id => @ticket.id)
   end
 
   private

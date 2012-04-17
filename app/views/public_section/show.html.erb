@@ -1,3 +1,4 @@
+
 <center>
 <div id="back-button"><%= link_to("Back", {:controller => "public_ticket", :action => 'show', :team_id => @ticket.team_id}, :class => 'back-link') %></div>
 
@@ -25,5 +26,11 @@
 	<input type="submit" value="" class="purchase" >
 	</div>
 	</form>
+	<c:if @ticket.team_id = 1 >
+	    content to process if tag condition is satisfied
+	</c:if>
+	<c:else>
+	    NOPES
+    </c:else>
 </div>
 </center>
