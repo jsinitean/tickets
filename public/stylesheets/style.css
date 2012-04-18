@@ -53,6 +53,29 @@ a.viewsox { float: right; padding: 0 0; margin: 0 0 4px 0;
   text-decoration: none; font-size: 0.9em; text-align: left; }
 a.viewsox:hover { background:url(/images/sox.jpg) no-repeat 0 0; opacity: 0.9;}
 
+/*Sections image styling*/
+#sectionConditions{width:600px; height:400px; position:relative; margin:0 auto; padding:15px;}
+
+a.viewbull2 { float: right; padding: 0px 0; margin: 0 0 5px 0; 
+  background:url(/images/315_bulls.jpg) no-repeat 0 0;  color: #fff; width:600px; height:400px; opacity: 0.8; border-radius:25px;
+  text-decoration: none; font-size: 1.8em; text-align: center; font-variant:small-caps; font-weight:bolder; text-shadow: 2px 2px #ff0000; }
+a.viewbull2:hover { background:url(/images/315_bulls.jpg) no-repeat 0 0; opacity: 0.9;}
+
+a.viewbull1 { float: right; padding: 0px 0; margin: 0 0 5px 0; 
+  background:url(/images/103_bulls.jpg) no-repeat 0 0;  color: #fff; width:600px; height:400px; opacity: 0.8; border-radius:25px;
+  text-decoration: none; font-size: 1.8em; text-align: center; font-variant:small-caps; font-weight:bolder; text-shadow: 2px 2px #ff0000; }
+a.viewbull1:hover { background:url(/images/103_bulls.jpg) no-repeat 0 0; opacity: 0.9;}
+
+a.viewcub1 { float: right; padding: 0px 0; margin: 0 0 5px 0; 
+  background:url(/images/38_cubs.jpg) no-repeat 0 0;  color: #fff; width:600px; height:400px; opacity: 0.8; border-radius:25px;
+  text-decoration: none; font-size: 1.8em; text-align: center; font-variant:small-caps; font-weight:bolder; text-shadow: 2px 2px #ff0000; }
+a.viewcub1:hover { background:url(/images/38_cubs.jpg) no-repeat 0 0; opacity: 0.9;}
+
+a.viewsox1 { float: right; padding: 0px 0; margin: 0 0 5px 0;  
+  background:url(/images/122_sox.jpg) no-repeat 0 0;  color: #fff; width:600px; height:400px; opacity: 0.8; border-radius:25px;
+  text-decoration: none; font-size: 1.8em; text-align: center; font-variant:small-caps; font-weight:bolder; text-shadow: 2px 2px #0F0F0F; }
+a.viewsox1:hover { background:url(/images/122_sox.jpg) no-repeat 0 0; opacity: 0.9;}
+
 #purchaseView{width:150px; height:85px; position:relative; margin:0 auto; padding:15px;}
 
 .purchase { float: right; padding: 2px 0; margin: 0 0 0 0; 

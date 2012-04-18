@@ -6,6 +6,7 @@
 	
 	<div id="headtwo"><%= @team.name %>
 	</div>
+	<% case @ticket.team_id when 1 %> <h5><i>There are no remaining available tickets for this season.</i></h5> <% end %>
 	<table class="ticket-listing" summary="Ticket list">
 	    <div id="sectionHeader">
 		<tr class="sectionHeader">
@@ -23,4 +24,14 @@
 	      <td><%= link_to("View", {:controller => 'public_section', :action => 'show', :ticket_id => ticket.id}, :class => 'viewnext') %></td></tr>
 	    <% end %>
 	</table>	
+	<div id="sectionConditions">
+	<% case @ticket.team_id when 1 %>
+		    <%= link_to("Section 103 Row 12 Seats 13 & 14", {:controller => 'public_ticket', :action => 'show', :team_id => 1}, :class => 'viewbull1') %>
+			<%= link_to("Section 315 Row 3 Seats 3 & 4", {:controller => 'public_ticket', :action => 'show', :team_id => 1}, :class => 'viewbull2') %>
+	<% when 2 %>
+			<%= link_to("Section 38 Row 10 Seats 3,4,5 & 6", {:controller => 'public_ticket', :action => 'show', :team_id => 2}, :class => 'viewcub1') %>
+	<% when 3 %>
+			<%= link_to("Section 122 Row 23 Seats 1,2,3 & 4", {:controller => 'public_ticket', :action => 'show', :team_id => 3}, :class => 'viewsox1') %>
+	<% end %>
+	</div>	
 </center>
