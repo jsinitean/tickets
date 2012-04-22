@@ -24,8 +24,7 @@
     </tr>
     <% @tickets.each do |ticket| %>
     <tr class="ticket-list">
-	  <td><img src=/images/<%= ticket.opposing_teams.location %>></td>
-	  <td><i><%= ticket.opposing_teams.abbreviation %></i></td>
+
 	  <td><b><%= ticket.game_at.strftime("%a, %m/%d/%Y %I:%M%p") %></b></td>
       <td class="center"><%= status_tag(ticket.visible) %></td>
       <td class="actions">
