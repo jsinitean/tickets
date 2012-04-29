@@ -6,6 +6,10 @@
 	<td><%= f.select(:team_id, @teams.collect {|p| [p.name, p.id]}) %></td>
   </tr>
   <tr>
+    <th><%= f.label(:opposing_teams_id, "Team Number") %></th>
+	<td><%= f.text_field(:opposing_teams_id) %></td>
+  </tr>
+  <tr>
     <th><%= f.label(:name, "Game") %></th>
     <td><%= f.text_field(:name) %></td>
   </tr>
