@@ -22,7 +22,7 @@
       <th>Available</th>
       <th>Actions</th>
     </tr>
-    <% @tickets.each do |ticket| %>
+    <% @tickets.visible.each do |ticket| %>
     <tr class="ticket-list">
 	  <td><img src=/images/<%= ticket.opposing_teams.location %>></td>
 	  <td><i><%= ticket.opposing_teams.abbreviation %></i></td>
