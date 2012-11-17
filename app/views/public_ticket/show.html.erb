@@ -6,7 +6,6 @@
 	
 	<div id="headtwo"><%= @team.name %>
 	</div>
-	<!-- <% case @ticket.team_id when 1 %> <h5><i>There are no remaining available tickets for this season.</i></h5> <% end %> -->
 	<table class="ticket-listing" summary="Ticket list">
 	    <div id="sectionHeader">
 		<tr class="sectionHeader">
@@ -16,14 +15,44 @@
 	    </tr>
 	</div>
 		
-	    <% @tickets.each do |ticket| %>
+	    <% @tickets.visible.each do |ticket| %>
+	
+		<script>
+			function toggle<%= ticket.id %>() {
+
+					var ele = document.getElementById("toggleText<%= ticket.id %>");
+					var text = document.getElementById("displayText<%= ticket.id %>");
+
+					if(ele.style.display == "block") 
+					{
+				    	ele.style.display = "none";
+
+				  	}
+					else {
+						ele.style.display = "block";
+
+					}
+			}
+		</script>
+	
 	    <tr class="ticket-list">
-		  <td><img src=/images/<%= ticket.opposing_teams.location %>></td>
+		  <td><img src=/images/<%= ticket.opposing_teams.location %> width="75" height"50" opacity"0.8"></td>
 		  <td><i><%= ticket.opposing_teams.abbreviation %></i></td>
-		  <td><b><%= ticket.game_at.strftime("%a, %m/%d/%Y %I:%M%p") %></b></td>
+		  <td><b><%= ticket.game_at.strftime("%a, %m/%d/%Y %I:%M%p") %>&nbsp</b>
+		  <a id="displayText<%= ticket.id %>" class="clicky" href="javascript:toggle<%= ticket.id %>();"><img src=/images/dropdown.jpg height="15" weight="15"></a></td>
 	      <td><%= link_to("View", {:controller => 'public_section', :action => 'show', :ticket_id => ticket.id}, :class => 'viewnext') %></td></tr>
-	    <% end %>
+		  <tr class="sections-list"><td><td class="sections-list"><td><div id="toggleText<%= ticket.id %>" style="display: none">
+			<% ticket.sections.visible.each do |section| %><ul><li>
+			<i>Section </i><%= section.name %> <i>Row </i><%= section.row %>
+			<i> Seat <i><%= section.row %></i> <b>$<%= section.price %></b></li></ul>
+		  <% end %></div></td></td></td></tr>
+	<% end %>
 	</table>	
+	
+	
+	
+	
+	
 	<div id="sectionConditions">
 	<% case @ticket.team_id when 1 %>
 		    <%= link_to("Section 103 Row 12 Seats 13 & 14", {:controller => 'public_ticket', :action => 'show', :team_id => 1}, :class => 'viewbull1') %>

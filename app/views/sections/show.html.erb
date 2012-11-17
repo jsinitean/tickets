@@ -1,7 +1,7 @@
 <% @page_title = "Show Section: #{@section.name}" %>
 
 <div id="back-button">
-<%= link_to("Back", {:action => 'list', :tickets_id => @section.tickets_id}, :class => 'back-link') %>
+<%= link_to("Back", {:action => 'list', :ticket_id => @section.ticket_id}, :class => 'back-link') %>
 </div>
 
 <div class="section show">
@@ -12,7 +12,7 @@
   <table summary="Section detail view">
     <tr>
       <th>ID</th>
-      <td><%= @section.tickets_id %></td>
+      <td><%= @section.ticket_id %></td>
     </tr>
     <tr>
       <th>Section</th>

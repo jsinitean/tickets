@@ -16,7 +16,7 @@ class SectionsController < ApplicationController
   end
   
   def list
-    @sections = Section.sorted.where(:tickets_id => @ticket.id)
+    @sections = Section.sorted.where(:ticket_id => @ticket.id)
   end
   
   def show
@@ -24,7 +24,7 @@ class SectionsController < ApplicationController
   end
   
   def new
-    @section = Section.new(:tickets_id => @ticket.id)
+    @section = Section.new(:ticket_id => @ticket.id)
     @tickets = Ticket.order('game_at ASC')
   end
   
@@ -33,7 +33,7 @@ class SectionsController < ApplicationController
     @section = Section.new(params[:section])
     if @section.save
       flash[:notice] = "Section created."
-      redirect_to(:action => 'list', :tickets_id => @section.tickets_id)
+      redirect_to(:action => 'list', :ticket_id => @section.ticket_id)
     else
       @tickets = Ticket.order('game_at ASC')
       render('new')
@@ -50,7 +50,7 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id])
     if @section.update_attributes(params[:section])
       flash[:notice] = "Section updated."
-      redirect_to(:action => 'show', :id => @section.id, :tickets_id => @section.tickets_id)
+      redirect_to(:action => 'show', :id => @section.id, :ticket_id => @section.ticket_id)
     else
       @section_count = @ticket.sections.size
       @tickets = Ticket.order('game_at ASC')
@@ -66,14 +66,14 @@ class SectionsController < ApplicationController
     section = Section.find(params[:id])
     section.destroy
     flash[:notice] = "Section destroyed."
-    redirect_to(:action => 'list', :tickets_id => @ticket.id)
+    redirect_to(:action => 'list', :ticket_id => @ticket.id)
   end
 
   private
   
   def find_ticket
-    if params[:tickets_id]
-      @ticket = Ticket.find_by_id(params[:tickets_id])
+    if params[:ticket_id]
+      @ticket = Ticket.find_by_id(params[:ticket_id])
     end
   end
   

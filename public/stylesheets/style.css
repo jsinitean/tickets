@@ -26,7 +26,7 @@ a.back-link { float:left; padding: 5px 22px; margin: 0 0 0 0;
   text-decoration: none; font-size: 1em; text-indent: 12px; }
 a.back-link:hover { background:url(/images/more3.gif) no-repeat 0 0 #AEAEAE; opacity:0.7; color:#FFFFFF; text-decoration:none; }
 
-.ticket-list img{width:75px; height:50px; opacity:0.8;}
+.ticket-list img{opacity:0.8;}
 
 /* large action buttons */
 

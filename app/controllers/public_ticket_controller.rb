@@ -28,6 +28,7 @@ class PublicTicketController < ApplicationController
         @ticket = Ticket.find_by_team_id(params[:team_id])
       end
     end
+    
 
     def show
       if params[:team_id]

@@ -15,10 +15,10 @@ class Ticket < ActiveRecord::Base
   scope :sorted, order('tickets.game_at ASC')
   scope :dated, where('tickets.game_at > now()')
   
-  private
-  
   def position_scope
     "tickets.team_id = #{team_id.to_i}"
   end
+
+
   
 end
