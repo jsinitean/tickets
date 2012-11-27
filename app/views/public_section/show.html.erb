@@ -4,7 +4,8 @@
 
 <div id="sections">
 	<div class="headers">
-<h2>vs. <%= @ticket.opposing_teams.city %> <%= @ticket.opposing_teams.name %></h2>
+		<h2><td><img src=/images/<%= @ticket.team_id %>.jpeg width="75" opacity"0.8"> vs. <img src=/images/<%= @ticket.opposing_teams.location %> height="75" opacity"0.8"></td></h2></br>
+<h3><%= @ticket.opposing_teams.city %> <%= @ticket.opposing_teams.name %></h3>
 <h4><td><%= @ticket.game_at.strftime("%A, %B %d, %Y %I:%M%p") %></td></h4>
 <h5><td><i><%= @ticket.promo %></i></td></h5>
 	</div>
