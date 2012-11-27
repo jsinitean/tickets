@@ -16,12 +16,14 @@ class TicketsController < ApplicationController
   
   def show
     @ticket = Ticket.find(params[:id])
+    @team = Team.find(params[:team_id])
   end
   
   def new
     @ticket = Ticket.new
     @ticket_count = Ticket.count + 1
     @teams = Team.order('name ASC')
+    @opposing_teams = OpposingTeams.order('city ASC')
   end
   
   def create
@@ -44,6 +46,7 @@ class TicketsController < ApplicationController
   def edit
     @ticket = Ticket.find(params[:id])
     @ticket_count = Ticket.count
+    @opposing_teams = OpposingTeams.order('city ASC')
     @teams = Team.order('name ASC')
   end
   

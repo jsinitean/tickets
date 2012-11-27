@@ -6,12 +6,8 @@
 	<td><%= f.select(:team_id, @teams.collect {|p| [p.name, p.id]}) %></td>
   </tr>
   <tr>
-    <th><%= f.label(:opposing_teams_id, "Team Number") %></th>
-	<td><%= f.text_field(:opposing_teams_id) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:name, "Game") %></th>
-    <td><%= f.text_field(:name) %></td>
+    <th><%= f.label(:opposing_teams_id, "Opponent") %></th>
+	<td><%= f.select(:opposing_teams_id, @opposing_teams.collect {|p| [ p.city+' '+p.name, p.id]}) %></td>
   </tr>
   <tr>
     <th><%= f.label(:game_at, "Game Time") %></th>
