@@ -8,6 +8,7 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 587,
   :user_name            => "jeremy.sinitean@gmail.com",
   :password             => "chicagocubs44",
+  :domain               => "sinitix.com"
   :authentication       => :plain,
   :enable_starttls_auto => true
 }
