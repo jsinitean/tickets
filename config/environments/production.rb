@@ -10,8 +10,7 @@ SimpleCms::Application.configure do
     :content_type   => "text/html",
     :user_name      => 'jeremy.sinitean@gmail.com',
     :password       => 'chicagocubs44'
-    :domain         => "sinitix.com"
-  }
+    }
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
