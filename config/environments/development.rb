@@ -6,7 +6,7 @@ SimpleCms::Application.configure do
     :enable_starttls_auto => true,
     :address        => 'smtp.gmail.com',
     :port           => 587,
-    :authentication => :login,
+    :authentication => :plain,
     :content_type   => "text/html",
     :user_name      => 'jeremy.sinitean@gmail.com',
     :password       => 'chicagocubs44'
