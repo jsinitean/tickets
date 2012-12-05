@@ -1,0 +1,10 @@
+<center>
+<div id="sections">	
+<div id="back-button"><%= link_to("Back", {:controller => "public_section", :action => 'show', :ticket_id => @ticket.id}, :class => 'back-link') %></div>
+<div class="headers"><table class="ticket-listing" summary="Ticket list"><tr class="ticket-list">
+	<h2><td><img src=/images/<%= @ticket.team_id %>.jpeg height="75" opacity"0.8"> vs. <img src=/images/<%= @ticket.opposing_teams.location %> height="75" opacity"0.8"></td></h2></tr></table>
+</div>
+
+<%= render 'form' %>
+</div>
+</center>

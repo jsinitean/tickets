@@ -9,6 +9,7 @@ gem 'mysql2', '0.3.11'
 
 gem 'rake', '0.9.2.2'
 gem 'pg'
+gem 'mail', '2.3.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'

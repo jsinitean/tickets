@@ -1,5 +1,7 @@
 SimpleCms::Application.routes.draw do
 
+  resources :users
+
   root :to => "public#index"
   
   match 'admin', :to => 'access#menu'

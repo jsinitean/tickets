@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120404031733) do
+ActiveRecord::Schema.define(:version => 20121205041416) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",      :limit => 25
     t.string   "last_name",       :limit => 50
-    t.string   "email",           :limit => 100, :default => "", :null => false
+    t.string   "email",           :limit => 100, :null => false
     t.string   "hashed_password", :limit => 40
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 20120404031733) do
     t.string   "seat"
     t.string   "price"
     t.boolean  "visible",                  :default => false
-    t.integer  "tickets_id"
+    t.integer  "ticket_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "value",      :limit => 25
@@ -73,6 +73,16 @@ ActiveRecord::Schema.define(:version => 20120404031733) do
     t.datetime "updated_at"
     t.string   "promo"
     t.string   "notes"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "game",       :limit => 250
+    t.string   "date",       :limit => 250
   end
 
 end

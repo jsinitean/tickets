@@ -1,0 +1,32 @@
+<center>
+	<div id="back-button">
+	<%= link_to("Back", {:controller => "public", :action => 'index'}, :class => 'back-link') %>
+	</div>
+
+<p id="notice"><%= notice %></p>
+<br />
+<div id="sections">
+<table summary="Section detail view">
+  <tr>
+    <th>Game</th>
+    <td><%= @user.game %></td>
+  </tr>
+  <tr>
+    <th>Date</th>
+    <td><%= @user.date %></td>
+  </tr>
+  <tr>
+    <th>Full Name</th>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th>Message</th>
+    <td><%= @user.content %></td>
+  </tr>
+</table>
+</div>
+</center>

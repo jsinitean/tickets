@@ -26,4 +26,14 @@ class PublicSectionController < ApplicationController
           @sections = Section.visible.sorted.where(:ticket_id => @ticket.id)
       end
 
+      def list
+          @sections = Section.visible.sorted.where(:ticket_id => @ticket.id)
+      end
+      
+      def send_mail
+        UserMailer.registration_confirmation(@user).deliver
+        flash[:notice] = "Section updated."
+        redirect_to(:action => 'show', :id => @section.id, :ticket_id => @section.ticket_id)
+      end
+      
   end

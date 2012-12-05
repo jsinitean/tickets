@@ -3,13 +3,13 @@
 <div id="back-button"><%= link_to("Back", {:controller => "public_ticket", :action => 'show', :team_id => @ticket.team_id}, :class => 'back-link') %></div>
 
 <div id="sections">
-	<div class="headers">
-		<h2><td><img src=/images/<%= @ticket.team_id %>.jpeg width="75" opacity"0.8"> vs. <img src=/images/<%= @ticket.opposing_teams.location %> height="75" opacity"0.8"></td></h2></br>
+	<div class="headers"><table class="ticket-listing" summary="Ticket list"><tr class="ticket-list">
+		<h2><td><img src=/images/<%= @ticket.team_id %>.jpeg height="75" opacity"0.8"> vs. <img src=/images/<%= @ticket.opposing_teams.location %> height="75" opacity"0.8"></td></h2></tr></table>
 <h3><%= @ticket.opposing_teams.city %> <%= @ticket.opposing_teams.name %></h3>
 <h4><td><%= @ticket.game_at.strftime("%A, %B %d, %Y %I:%M%p") %></td></h4>
 <h5><td><i><%= @ticket.promo %></i></td></h5>
 	</div>
-<form action="mailto:jeremy.sinitean@gmail.com;a1recycler@gmail.com?cc=johnmsinitean@gmail.com;jeffrey.sinitean@gmail.com&Subject=<%= @ticket.opposing_teams.city %>%20<%= @ticket.opposing_teams.name %>:%20<%=  @ticket.game_at.strftime("%b %d, %Y %I:%M%p") %>&body=Which%20tickets%20would%20you%20like?" method="post">
+
 	<table class="listing" summary="Ticket list">
 
 	    <% @sections.each do |section| %>
@@ -24,9 +24,8 @@
 	    <% end %>
 	  </table>
 	<div id="purchaseView">
-	<input type="submit" value="" class="purchase" >
+	<%= link_to("", {:controller => 'users', :action => 'new', :ticket_id => @ticket.id}, :class=>'purchase') %>
 	</div>
-	</form>
 </div>
 </center>	
 	<div id="sectionConditions">

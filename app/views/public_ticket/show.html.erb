@@ -44,8 +44,8 @@
 		  <tr class="sections-list"><td><td class="sections-list"><td><div id="toggleText<%= ticket.id %>" style="display: none">
 			<% ticket.sections.visible.each do |section| %><ul><li>
 			<i>Section </i><%= section.name %> <i>Row </i><%= section.row %>
-			<i> Seat </i><%= section.row %> <b>$<%= section.price %></b></li></ul>
-		  <% end %></div></td></td></td></tr>
+			<i> Seat </i><%= section.row %> <b>$<%= section.price %></b></li>
+		  <% end %></ul></div></td></td></td></td></tr>
 	<% end %>
 	</table>	
 	

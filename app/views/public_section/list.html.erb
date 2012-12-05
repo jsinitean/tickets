@@ -1,0 +1,45 @@
+<center>
+<div id="back-button"><%= link_to("Back", {:controller => "public_ticket", :action => 'show', :team_id => @ticket.team_id}, :class => 'back-link') %></div>
+	
+	<%= form_for(:section, :url => {:controller => 'public_section', :action => 'send_mail', :ticket_id => @ticket.id}) do |f| %>
+
+	<%= error_messages_for(@section) %>
+
+	<table summary="Section form fields">
+      <tr>
+		<th><%= f.label(:subject, "Game Date") %></th>
+		<td><%= @ticket.game_at.strftime("%A, %B %d, %Y %I:%M%p") %></td>
+	  </tr>
+	  <tr>
+	    <th><%= f.label(:email, "Email") %></th>
+	    <td><%= f.text_field(:email) %></td>
+	  </tr>	
+	  <tr>
+	    <th><%= f.label(:name, "Name") %></th>
+	    <td><%= f.text_field(:name) %></td>
+	  </tr>
+	  <tr>
+	    <th><%= f.label(:body, "Message") %></th>
+	    <td><%= f.text_field(:body) %></td>
+	  </tr>
+
+      <table class="listing" summary="Ticket list">
+	  <% @sections.each do |section| %>
+	  <tr>
+        <td><%= f.check_box(:section) %></td>
+		<td>Section <%= section.name %></td>
+		<td>Row <%= section.row %></td>
+		<td>Seat <%= section.seat %></td>
+		<td>$<%= section.price %></td>
+	  </tr>
+	  <% end %>
+	  </table>
+	</table>
+
+	  <div class="form-buttons">
+	    <%= submit_tag("Submit Request") %>
+	  </div>
+
+	<% end %>
+
+</center>

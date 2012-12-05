@@ -12,10 +12,10 @@
   <%= form_for(:section, :url => {:action => 'update', :id => @section.id, :ticket_id => @section.ticket_id}) do |f| %>
   
     <%= render(:partial => 'form', :locals => {:f => f}) %>
-    
-    <div class="form-buttons">
-      <%= submit_tag("Update Section") %>
-    </div>
-    
+
+	  <div class="form-buttons">
+	    <%= submit_tag("Submit Request") %>
+	  </div>
+
   <% end %>
 </div>

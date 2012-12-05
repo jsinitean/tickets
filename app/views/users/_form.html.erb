@@ -1,0 +1,47 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this ticket from being created:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= @ticket.opposing_teams.city %> <%= @ticket.opposing_teams.name %>
+<%= @ticket.game_at.strftime("%A, %B %d, %Y %I:%M%p") %>
+<div id="sections">
+<table summary="Section form fields">
+ <tr>
+	<th><%= f.label("Game") %></th>	
+	<td><%= f.text_field :game, :value => @ticket.opposing_teams.city+' '+@ticket.opposing_teams.name %></td>
+ </tr>	
+ <tr>
+	<th><%= f.label("Date") %></th>
+	<td><%= f.text_field :date, :value => @ticket.game_at.strftime("%B %d, %Y %I:%M%p") %></td>
+ </tr>
+ <tr>
+	<th><%= f.label("Full Name") %></th>
+    <td><%= f.text_field :name %></td>
+ </tr>
+ <tr>
+	<th><%= f.label("Email Address") %></th>
+    <td><%= f.text_field :email %></td>
+ </tr>
+ <tr>
+	<th><%= f.label("Which Tickets") %></th>
+    <td><%= f.text_area(:content, :size => "30x5") %></td>
+ <tr>
+
+</table>
+<br />
+<div class="form-buttons">
+	<%= f.submit("Submit Request") %>
+</div>	
+</div>
+<% end %>
+
+
