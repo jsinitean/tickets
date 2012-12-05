@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(
       :to => "jeremy.sinitean@gmail.com",
-      :from => "#{user[:name]} <#{user[:email]}>",
+      :from => "Jeremy Sinitean <jeremy.sinitean@gmail.com>",
       :subject => 'Tickets Request: '+user.name
     )
   end
