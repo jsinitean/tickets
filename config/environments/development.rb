@@ -6,10 +6,10 @@ SimpleCms::Application.configure do
     :enable_starttls_auto => true,
     :address        => 'smtp.gmail.com',
     :port           => 587,
-    :authentication => :plain,
+    :authentication => :login,
     :content_type   => "text/html",
     :user_name      => 'jeremy.sinitean@gmail.com',
-    :password       => 'chicagocubs44'
+    :password       => 'chicagobulls123'
   }
   
   # Settings specified here will take precedence over those in config/environment.rb
