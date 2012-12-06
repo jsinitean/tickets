@@ -3,13 +3,12 @@ SimpleCms::Application.configure do
   config.action_mailer.delivery_method = :smtp
   # Defaults to:
    config.action_mailer.smtp_settings =  {
-    :enable_starttls_auto => true,
-    :address        => 'smtp.gmail.com',
+    :address        => "smtp.gmail.com",
     :port           => 587,
-    :authentication => :login,
-    :content_type   => "text/html",
-    :user_name      => 'jeremy.sinitean@gmail.com',
-    :password       => 'chicagobulls123'
+    :user_name      => "jeremy.sinitean@gmail.com",
+    :password       => 'chicagobulls123',
+    :authentication => "plain",
+    :enable_starttls_auto => true
   }
   
   # Settings specified here will take precedence over those in config/environment.rb
