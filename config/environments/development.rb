@@ -1,15 +1,13 @@
 SimpleCms::Application.configure do
   
-  config.action_mailer.delivery_method = :smtp
-  # Defaults to:
-   config.action_mailer.smtp_settings =  {
-    :address        => "smtp.gmail.com",
-    :port           => 587,
-    :user_name      => "jeremy.sinitean@gmail.com",
-    :password       => 'chicagobulls123',
-    :authentication => "plain",
-    :enable_starttls_auto => true
-  }
+  config.action_mailer.smtp_settings =  {
+      :address                => "smtp.gmail.com",
+      :port                   => 587,
+      :user_name              => "sinitix1@gmail.com",
+      :password               => "bulls12345",
+      :authentication         => "plain",
+      :enable_starttls_auto   => true
+   }
   
   # Settings specified here will take precedence over those in config/environment.rb
 
@@ -25,7 +23,7 @@ SimpleCms::Application.configure do
   config.consider_all_requests_local       = true
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

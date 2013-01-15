@@ -1,16 +1,15 @@
 # Load the rails application
 require File.expand_path('../application', __FILE__)
 
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.default :content_type => "text/html"
 ActionMailer::Base.smtp_settings = {
-  :address        => "smtp.gmail.com",
-  :port           => 587,
-  :user_name      => "jeremy.sinitean@gmail.com",
-  :password       => 'chicagobulls123',
-  :authentication => "plain",
-  :enable_starttls_auto => true
+  :address                => "smtp.gmail.com",
+  :port                   => 587,
+  :user_name              => "sinitix1@gmail.com",
+  :password               => "bulls12345",
+  :authentication         => "plain",
+  :enable_starttls_auto   => true
 }
+
 
 # Initialize the rails application
 SimpleCms::Application.initialize!

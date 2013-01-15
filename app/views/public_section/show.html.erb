@@ -10,15 +10,14 @@
 <h5><td><i><%= @ticket.promo %></i></td></h5>
 	</div>
 
-	<table class="listing" summary="Ticket list">
+	<table class="ticket-listing" summary="Ticket list">
 
 	    <% @sections.each do |section| %>
-	    <tr class="<%= cycle('odd', 'even') %>"><center>
-	      <td>Section <%= section.name %></td>
-	      <td>Row <%= section.row %></td>
-	      <td>Seat <%= section.seat %></td>
-		  <td>$<%= section.price %></td>
-		
+	    <tr class="ticket-list"><center>
+	      <td><i>Section</i> <%= section.name %></td>
+	      <td><i>Row</i> <%= section.row %></td>
+	      <td><i>Seat</i> <%= section.seat %></td>
+		  <td><b>$<%= section.price %></b></td>
 		</center>
 	    </tr>
 	    <% end %>
