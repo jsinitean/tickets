@@ -27,7 +27,7 @@
 	  <td><img src=/images/<%= ticket.opposing_teams.location %>></td>
 	  <td><i><%= ticket.opposing_teams.abbreviation %></i></td>
 	  <td><b><%= ticket.game_at.strftime("%a, %m/%d/%Y %I:%M%p") %></b></td>
-      <td class="center"><%= status_tag(ticket.visible) %></td>
+      <td class="center"><%= status_tag(ticket.visible) %>(<%= ticket.sections.visible.size %>)</td>
       <td class="actions">
         <%= link_to("View", {:controller => 'sections', :action => 'list', :ticket_id => ticket.id}, :class => 'viewnext') %>
         <%= link_to("Edit", {:action => 'edit', :id => ticket.id, :team_id => @team.id}, :class => 'action edit') %>
