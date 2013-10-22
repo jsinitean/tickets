@@ -13,12 +13,14 @@ class Ticket < ActiveRecord::Base
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
   scope :sorted, order('tickets.game_at ASC')
-  scope :dated, where('tickets.game_at > now()')
+  scope :dated, where('tickets.game_at > now() AND visible = true')
   
-  def position_scope
-    "tickets.team_id = #{team_id.to_i}"
+  
+  def self.show
+      where(
+          'tickets.game_at > CURRENT_TIMESTAMP' ,'visible => false'
+      )
   end
-
 
   
 end
