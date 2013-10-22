@@ -38,7 +38,7 @@
 	    <tr class="ticket-list">
 		  <td><img src=/images/<%= ticket.opposing_teams.location %> width="75" opacity"0.8"></td>
 		  <td><i><%= ticket.opposing_teams.abbreviation %></i></td>
-		  <td><b><%= ticket.game_at.strftime("%a, %B %d, %Y %I:%M%p") %></b></td>
+		  <td><b><%= ticket.game_at.try(:strftime, "%a, %B %d, %Y %I:%M%p") %></b></td>
 	      
 	     </tr>
 			<td>
