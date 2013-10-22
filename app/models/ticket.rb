@@ -10,11 +10,10 @@ class Ticket < ActiveRecord::Base
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
   
-  scope :visible, where('visible = 1')
+  scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
   scope :sorted, order('tickets.game_at ASC')
   scope :dated, where('tickets.game_at > now()')
-  scope :show, where('tickets.game_at > now() AND tickets.visible = 1')
   
   def position_scope
     "tickets.team_id = #{team_id.to_i}"
