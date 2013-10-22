@@ -15,6 +15,7 @@ module SimpleCms
       :user_name            => "sinitix1@gmail.com",
       :password             => "bulls12345",
       :authentication       => :plain,
+      :host                 => "sinitix.com"
       :enable_starttls_auto => true
     }
     
