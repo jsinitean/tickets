@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails'
+gem 'rails', '4.0.0'
 
 # Bundle edge Rails instead:
 
@@ -13,6 +13,8 @@ gem 'mail'
 gem 'newrelic_rpm'
 
 gem 'activerecord'
+
+gem 'activesupport', '4.0.0'
 
 gem 'protected_attributes'
 
