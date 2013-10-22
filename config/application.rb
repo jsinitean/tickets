@@ -8,14 +8,14 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module SimpleCms
   class Application < Rails::Application
-    
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.default_url_options = { :host => "sinitix.com" }
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :user_name            => "sinitix1@gmail.com",
       :password             => "bulls12345",
       :authentication       => :plain,
-      :host                 => "sinitix.com"
       :enable_starttls_auto => true
     }
     
