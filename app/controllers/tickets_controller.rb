@@ -4,6 +4,7 @@ class TicketsController < ApplicationController
 
   before_filter :confirm_logged_in
   before_filter :find_ticket
+
   
   def index
     list
@@ -27,14 +28,13 @@ class TicketsController < ApplicationController
   end
   
   def create
-    new_position = params[:ticket].delete(:position)
     # Instantiate a new object using form parameters
     @ticket = Ticket.new(params[:ticket])
     # Save the object
     if @ticket.save
       # If save succeeds, redirect to the list action
       flash[:notice] = "Ticket created."
-      redirect_to(:action => 'list', :team_id => @ticket.team_id)
+      redirect_to ticket_path, :team_id => @ticket.team_id
     else
       # If save fails, redisplay the form so user can fix problems
       @ticket_count = @team.tickets.size + 1
@@ -51,7 +51,7 @@ class TicketsController < ApplicationController
   end
   
   def update
-    new_position = params[:ticket].delete(:position)
+    #new_position = params[:ticket].delete(:position)
     # Find object using form parameters
     @ticket = Ticket.find(params[:id])
     # Update the object

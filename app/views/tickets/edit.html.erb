@@ -6,11 +6,11 @@
 
 <div class="ticket edit">
 <div class="menu">	
-  <h2>Update Ticket</h2>
+  <h2>Update Tickets</h2>
 </div>
 
   <%= form_for(:ticket, :url => {:action => 'update', :id => @ticket.id, :team_id => @team.id}) do |f| %>
-  
+
     <%= render(:partial => 'form', :locals => {:f => f}) %>
     
     <div class="form-buttons">

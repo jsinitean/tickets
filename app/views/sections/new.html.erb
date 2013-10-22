@@ -9,7 +9,7 @@
   <h2>Create Section</h2>
 </div>
 
-  <%= form_for(:section, :url => {:action => 'create', :ticket_id => @ticket.id}) do |f| %>
+  <%= form_for :section, :url => {:action => 'create', :ticket_id => @ticket.id} do |f| %>
   
     <%= render(:partial => 'form', :locals => {:f => f}) %>
     

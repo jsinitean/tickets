@@ -7,9 +7,7 @@
 <div class="menu">
   <h2>Teams</h2>
   <div class="identity"><%= pluralize(@teams.size, 'team') %> found</div>
-  <div id="addid">
-  <%= link_to("Add New Team", {:action => 'new'}, :class => 'action new') %>
-  </div>
+
 <div class="team list">  
 <div id="imageView">
       <%= link_to("", {:controller => 'tickets', :action => 'list', :team_id => 1}, :class => 'viewbull') %>

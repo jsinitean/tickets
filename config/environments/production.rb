@@ -7,7 +7,7 @@ SimpleCms::Application.configure do
       :port                   => 587,
       :user_name              => "sinitix1@gmail.com",
       :password               => "bulls12345",
-      :authentication         => "plain",
+      :authentication         => :plain,
       :enable_starttls_auto   => true
    }
   # The production environment is meant for finished, "live" apps.
@@ -19,6 +19,8 @@ SimpleCms::Application.configure do
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
+  
+  config.eager_load = true
 
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'

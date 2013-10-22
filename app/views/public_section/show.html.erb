@@ -26,7 +26,8 @@
 	<%= link_to("", {:controller => 'users', :action => 'new', :ticket_id => @ticket.id}, :class=>'purchase') %>
 	</div>
 </div>
-</center>	
+</center>
+	
 	<div id="sectionConditions">
 	<% case @ticket.team_id when 1 %>
 		    <%= link_to("Section 103 Row 12 Seats 13 & 14", {:controller => 'public_ticket', :action => 'show', :team_id => 1}, :class => 'viewbull1') %>

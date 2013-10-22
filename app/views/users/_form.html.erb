@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this ticket from being created:</h2>
@@ -37,7 +37,7 @@
 </table>
 <br />
 <div class="form-buttons">
-	<%= f.submit("Submit Request") %>
+	<%= f.submit("Request Tickets") %>
 </div>	
 </div>
 <% end %>

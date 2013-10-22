@@ -2,13 +2,17 @@ SimpleCms::Application.routes.draw do
 
   resources :users
 
+  
   root :to => "public#index"
   
-  match 'admin', :to => 'access#menu'
-  match 'show/:id', :to => 'public#show'
+  get 'admin', :to => 'access#menu'
   
-  #get "demo/index"
-
+  #resources :tickets, :only => [
+  #  :update 
+  #  ]
+  #get ':controller(/:action(/:id))', controller: /tickets\/[^\/]+/
+  match ':controller(/:action(/:id(.:format)))', via: [:get, :post]
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -64,5 +68,6 @@ SimpleCms::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match ':controller(/:action(/:id(.:format)))'
+  
+  
 end

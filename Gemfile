@@ -1,16 +1,20 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.8'
+gem 'rails'
 
 # Bundle edge Rails instead:
 
 gem 'mysql2', '0.3.11'
 
 
-gem 'rake', '0.9.2.2'
+gem 'rake'
 gem 'pg'
-gem 'mail', '2.3.3'
+gem 'mail'
 gem 'newrelic_rpm'
+
+gem 'activerecord'
+
+gem 'protected_attributes'
 
 # Use unicorn as the web server
 # gem 'unicorn'

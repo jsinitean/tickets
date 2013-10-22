@@ -1,6 +1,6 @@
 require 'digest/sha1'
 class AdminUser < ActiveRecord::Base
-  
+
   # To configure a different table name
   # set_table_name("admin_users")
   
@@ -8,7 +8,7 @@ class AdminUser < ActiveRecord::Base
   
   attr_accessor :password
   
-  EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+  EMAIL_REGEX = /\A\z/
   
   # standard validation methods
   # validates_presence_of :first_name
