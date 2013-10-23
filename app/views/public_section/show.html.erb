@@ -22,12 +22,55 @@
 	    </tr>
 	    <% end %>
 	  </table>
-	<div id="purchaseView">
-	<%= link_to("", {:controller => 'users', :action => 'new', :ticket_id => @ticket.id}, :class=>'purchase') %>
-	</div>
+
+</div>	
+
+<div id="sections2">
+	<div class="headers">
+		
+	To request any listed tickets, simply fill out the form below and click "Request Tickets".<br/><br/> We will respond as quickly as possible.<br/><br/>
+		
+<%= form_for(@user) do |f| %>
+
+<div id="sections">
+<table summary="Section form fields">
+ <tr>
+
+	<td><%= f.hidden_field :game, :value => @ticket.opposing_teams.city+' '+@ticket.opposing_teams.name %></td>
+ </tr>	
+ <tr>
+
+	<td><%= f.hidden_field :date, :value => @ticket.game_at.strftime("%B %d, %Y %I:%M%p") %></td>
+ </tr>
+ <tr>
+	<th><%= f.label :name, "Full Name" %></th>
+    <td><%= f.text_field :name, :size=>"30" %></td>
+ </tr>
+ <tr>
+	<th><%= f.label :email, "Email Address" %></th>
+    <td><%= f.text_field :email, :size=>"30" %></td>
+ </tr>
+ <tr>
+	<th><%= f.label :content, "Comments / Questions" %></th>
+    <td><%= f.text_area(:content, :size => "22x5") %></td>
+ <tr>
+
+</table>
+<br />
+
+<div id="purchaseView">
+	<%= f.submit '', :class=>'purchase' %>
+</div>	
+
+<% end %>
+</div>
+</div>
+</div>
+</div>
 </div>
 </center>
-	
+
+<!--	
 	<div id="sectionConditions">
 	<% case @ticket.team_id when 1 %>
 		    <%= link_to("Section 103 Row 12 Seats 13 & 14", {:controller => 'public_ticket', :action => 'show', :team_id => 1}, :class => 'viewbull1') %>
@@ -38,3 +81,4 @@
 			<%= link_to("Section 122 Row 23 Seats 1,2,3 & 4", {:controller => 'public_ticket', :action => 'show', :team_id => 3}, :class => 'viewsox1') %>
 	<% end %>
 	</div>
+-->	

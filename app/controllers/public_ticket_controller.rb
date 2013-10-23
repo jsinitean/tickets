@@ -36,4 +36,6 @@ class PublicTicketController < ApplicationController
       end
     end
     
+
+    
 end

@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
     mail(
       :to => "sinitix1@gmail.com",
       :from => "sinitix1@gmail.com",
-      :subject => 'Tickets Request: '
+      :subject => 'Sinitix: Ticket request has been submitted'
     )
   end
   

@@ -5,17 +5,21 @@ div, ul, h1, h2, h3, li, p, img{margin:0; padding:0;}
 ul{list-style-type:none;}
 
 /* TOP PANEL*/
-#topPanel{width:762px; height:160px; position:relative; margin:0 auto; padding:0;}
-#topPanel img{width:180px; height:180px; z-index:1; padding:0; position:absolute; margin:0 0 0 21px;}
+#topPanel{width:762px; height:125px; position:relative; margin:0 auto; padding:0;}
+#topPanel img{width:250px; height:100px; z-index:1; padding:0; position:absolute; margin:0 0 0 21px; opacity:1;}
 #topPanel .headone { text-align: left; font-size:30px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 
 /* HEADERS FOR INTERNAL PAGE*/ 
 #headtwo {height:30px; text-align: center; font-size:30px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 #sectionHeader {text-align: center; font-size:18px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 
-#sections{width:400px; height:372px; position:relative;}
+#sections{width:400px; height:300px; position:relative;}
 #sections .headers{color:#555;}
 #sections .mail{height:213px; width:400px;}
+
+#sections2{width:400px; height:350px; position:relative;}
+#sections2 .headers{color:#555;}
+#sections2 .mail{height:213px; width:400px;}
 
 .ticket-listing td{padding: 6px; color:#555;}
 
@@ -27,6 +31,8 @@ a.back-link { float:left; padding: 5px 22px; margin: 0 0 0 0;
 a.back-link:hover { background:url(/images/more3.gif) no-repeat 0 0 #AEAEAE; opacity:0.7; color:#FFFFFF; text-decoration:none; }
 
 .ticket-list img{opacity:0.8;}
+
+
 
 /* large action buttons */
 
@@ -76,7 +82,7 @@ a.viewsox1 { float: right; padding: 0px 0; margin: 0 0 5px 0;
   text-decoration: none; font-size: 1.8em; text-align: center; font-variant:small-caps; font-weight:bolder; text-shadow: 2px 2px #0F0F0F; }
 a.viewsox1:hover { background:url(/images/123_sox.jpg) no-repeat 0 0; opacity: 0.9;}
 
-#purchaseView{width:150px; height:85px; position:relative; margin:0 auto; padding:15px;}
+#purchaseView{width:150px; height:85px; position:relative; margin:0 auto; padding:15px; text-decoration: none; }
 
 .purchase { float: right; padding: 2px 0; margin: 0 0 0 0; 
   background:url(/images/buy.jpg) no-repeat 0 0;  color: #4C2516; width:154px; height:89px; opacity: 0.5; border-radius:25px;
