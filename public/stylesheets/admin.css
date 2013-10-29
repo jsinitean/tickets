@@ -6,7 +6,7 @@ ul{list-style-type:none;}
 
 /* TOP PANEL*/
 #topPanel{width:762px; height:160px; position:relative; margin:0 auto; padding:0;}
-#topPanel img{width:180px; height:180px; z-index:1; padding:0; position:absolute; margin:0 0 0 21px;}
+#topPanel img{width:250px; height:100px; z-index:1; padding:0; position:absolute; margin:0 0 0 21px;}
 #topPanel .headone { text-align: left; font-size:30px; font-weight:bold; font:Calibri; color:#555; background:#fff;}
 
 /* Login */

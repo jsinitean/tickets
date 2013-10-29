@@ -12,7 +12,7 @@ class TicketsController < ApplicationController
   end
   
   def list
-    @tickets = Ticket.sorted.dated.where(:team_id => @team.id)
+    @tickets = Ticket.sorted.admin.where(:team_id => @team.id)
   end
   
   def show

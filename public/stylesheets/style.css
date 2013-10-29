@@ -32,7 +32,19 @@ a.back-link:hover { background:url(/images/more3.gif) no-repeat 0 0 #AEAEAE; opa
 
 .ticket-list img{opacity:0.8;}
 
+/* Just added */
+#sections2 .headers{color:#555;}
+#sections2 .mail{height:213px; width:400px;}
 
+.ticket-listing2 td{padding: 6px; color:#555;}.list table {width: 762px; position:relative;}
+.list2 table tr td { border: 1px solid #666666; text-align: center; }
+.show2 table { clear: both; margin: 0 200px; width: 300px; }
+.show2 table tr th { white-space: nowrap; padding-right: 5px;}
+.show2 table tr td { border: 1px solid #666666; }
+.edit2 table, .new table { margin: 0 auto; }
+
+
+/* Can delete */
 
 /* large action buttons */
 

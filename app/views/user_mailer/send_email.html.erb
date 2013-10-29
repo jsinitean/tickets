@@ -11,8 +11,8 @@
   </head>
   <body>
     <div>
-      <h3 id = "banner">Requested Tickets</h3>
-    </div>
+      <h3 id = "banner">Requested Tickets: <%= link_to("View Admin", 'sinitix.com/sections/list?ticket_id='+@users.ticket_id, :class => 'viewnext') %>
+    </div></h3>
 
   <table summary="Section detail view">
     <tr>
@@ -22,6 +22,10 @@
     <tr>
       <th>Date</th>
       <td><%= @users.date %></td>
+    </tr>
+	<tr>
+      <th>Available Seats</th>
+      <td><%= @users.sections %></td>
     </tr>
     <tr>
       <th>Name</th>

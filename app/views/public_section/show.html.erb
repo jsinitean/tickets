@@ -42,6 +42,19 @@
 
 	<td><%= f.hidden_field :date, :value => @ticket.game_at.strftime("%B %d, %Y %I:%M%p") %></td>
  </tr>
+ <tr>	
+	<td><%= f.hidden_field :ticket_id, :value => @ticket.id %></td>
+ </tr>	
+ <tr>
+	<td><% @sections.each do |section| %>
+	<%= f.hidden_field :sections, :value => 
+	  	'Section '+section.name+' '+ 
+	    'Row '+section.row+' '+
+	    'Seat '+section.seat+' '+
+		'$'+section.price
+     %>
+	<% end %></td>
+ </tr>
  <tr>
 	<th><%= f.label :name, "Full Name" %></th>
     <td><%= f.text_field :name, :size=>"30" %></td>

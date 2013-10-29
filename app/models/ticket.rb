@@ -14,6 +14,7 @@ class Ticket < ActiveRecord::Base
   scope :invisible, where(:visible => false)
   scope :sorted, order('tickets.game_at ASC')
   scope :dated, where('tickets.game_at > now() AND visible = true')
+  scope :admin, where('tickets.game_at > now()')
   
   
   def self.show

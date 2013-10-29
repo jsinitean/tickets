@@ -22,6 +22,14 @@
 	<td><%= f.text_field :date, :value => @ticket.game_at.strftime("%B %d, %Y %I:%M%p") %></td>
  </tr>
  <tr>
+	<th><%= f.label("Sections") %></th>	
+	<td><%= f.text_field :sections, :value =>  %></td>
+ </tr>	
+ <tr>
+	<th><%= f.label("Ticket ID") %></th>
+	<td><%= f.text_field :ticket_id, :value => @ticket.ticket_id %></td>
+ </tr>
+ <tr>
 	<th><%= f.label("Full Name") %></th>
     <td><%= f.text_field :name %></td>
  </tr>

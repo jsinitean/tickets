@@ -1,27 +1,46 @@
-<h1>Listing users</h1>
+<center>
+<div id="back-button">
+<%= link_to("Back", {:controller => "admin"}, :class => 'back-link') %>
+</div>
+<div class="menu">
+  <h2>Requested Tickets</h2>
+  <div class="identity"><%= pluralize(@users.size, 'requests') %> found</div>
+</div>
 
-<table>
-  <tr>
+<div class="ticket list2">
+	<table class="ticket-listing2" summary="Ticket list">
+	    <div id="sectionHeader2">
+		<tr class="sectionHeader2">
     <th>Name</th>
     <th>Email</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
+	<th>Game</th>
+	<th>Date</th>
+	<th>Message</th>
+	<th>Request Date</th>
     <th></th>
   </tr>
 
-<% @user.each do |user| %>
-  <tr>
+<% @users.each do |user| %>
+  <tr class="ticket-list2">
     <td><%= user.name %></td>
     <td><%= user.email %></td>
+	<td><%= user.game %></td>
+	<td><%= user.date %></td>
     <td><%= user.content %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+	<td><%= user.created_at.strftime("%m/%d/%Y")  %></td>
+    <td>
+		
+		<%= if user.ticket_id.nil?
+		  puts "No Link"
+		else
+		  link_to("View", {:controller => 'sections', :action => 'list', :ticket_id => user.ticket_id}, :class => 'viewnext')	
+		end %>
+	</td>
   </tr>
 <% end %>
+</div>
 </table>
 
-<br />
+</div>
+</center>
 
-<%= link_to 'New User', new_user_path %>
