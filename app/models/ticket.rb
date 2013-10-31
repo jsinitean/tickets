@@ -10,11 +10,12 @@ class Ticket < ActiveRecord::Base
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
   
+  default_scope order('game_at ASC')
+  
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
-  scope :sorted, order('tickets.game_at ASC')
-  scope :dated, where('tickets.game_at > now() AND visible = true')
-  scope :admin, where('tickets.game_at > now()')
+  scope :dated, where('game_at > CURRENT_TIMESTAMP AND visible = true')
+  scope :admin, where('game_at > CURRENT_TIMESTAMP ')
   
   
   def self.show
