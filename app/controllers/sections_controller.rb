@@ -16,11 +16,11 @@ class SectionsController < ApplicationController
   end
   
   def list
-    @sections = Section.sorted.where(:ticket_id => @ticket.id)
+    @sections = Section.unscoped.where(:ticket_id => @ticket.id)
   end
   
   def show
-    @section = Section.find(params[:id])
+    @section = Section.unscoped.find(params[:id])
   end
   
   def new
@@ -41,13 +41,13 @@ class SectionsController < ApplicationController
   end
 
   def edit
-    @section = Section.find(params[:id])
+    @section = Section.unscoped.find(params[:id])
     @tickets = Ticket.order('game_at ASC')
   end
   
   def update
     new_position = params[:section].delete(:position)
-    @section = Section.find(params[:id])
+    @section = Section.unscoped.find(params[:id])
     if @section.update_attributes(params[:section])
       flash[:notice] = "Section updated."
       redirect_to(:action => 'show', :id => @section.id, :ticket_id => @section.ticket_id)

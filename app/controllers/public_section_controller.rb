@@ -23,7 +23,7 @@ class PublicSectionController < ApplicationController
       end
 
       def show
-          @sections = Section.visible.sorted.where(:ticket_id => @ticket.id)
+          @sections = Section.visible.where(:ticket_id => @ticket.id)
           @user = User.new
           @sections = Section.visible.where(:ticket_id => @ticket.id)
           respond_to do |format|
@@ -33,7 +33,7 @@ class PublicSectionController < ApplicationController
       end
 
       def list
-          @sections = Section.visible.sorted.where(:ticket_id => @ticket.id)
+          @sections = Section.visible.where(:ticket_id => @ticket.id)
       end
       
       def send_mail

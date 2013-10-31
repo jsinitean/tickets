@@ -10,9 +10,11 @@ class Section < ActiveRecord::Base
   validates_presence_of :name
   validates_length_of :name, :maximum => 255
   
+  default_scope order('name ASC, seat ASC')
+  default_scope where(:visible => true)
+  
   scope :visible, where(:visible => true)
   scope :invisible, where(:visible => false)
-  scope :sorted, order('sections.name ASC, sections.seat ASC')
   
   private
   
